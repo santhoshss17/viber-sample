@@ -38,6 +38,8 @@
 		AAB3D7041EF7936800454C66 /* MPAppDependency.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAB3D7011EF7936800454C66 /* MPAppDependency.swift */; };
 		AAB3D7051EF794E900454C66 /* MPCategoryListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAB3D6E61EF77C6800454C66 /* MPCategoryListRouter.swift */; };
 		AAB3D7061EF794EA00454C66 /* MPCategoryListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAB3D6E61EF77C6800454C66 /* MPCategoryListRouter.swift */; };
+		AAB3D7081EF7DD7F00454C66 /* Categories.plist in Resources */ = {isa = PBXBuildFile; fileRef = AAB3D7071EF7DD7F00454C66 /* Categories.plist */; };
+		AAB3D70B1EF7DF7500454C66 /* MPCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAB3D70A1EF7DF7500454C66 /* MPCategory.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,6 +81,8 @@
 		AAB3D6F81EF78C0C00454C66 /* MPUtilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MPUtilities.swift; sourceTree = "<group>"; };
 		AAB3D6FD1EF78C4100454C66 /* UIViewController+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
 		AAB3D7011EF7936800454C66 /* MPAppDependency.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MPAppDependency.swift; sourceTree = "<group>"; };
+		AAB3D7071EF7DD7F00454C66 /* Categories.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Categories.plist; sourceTree = "<group>"; };
+		AAB3D70A1EF7DF7500454C66 /* MPCategory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MPCategory.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,6 +133,7 @@
 		AAB3D6B01EF77B5E00454C66 /* MyPlace */ = {
 			isa = PBXGroup;
 			children = (
+				AAB3D7091EF7DF6600454C66 /* Model */,
 				AAB3D6FC1EF78C2100454C66 /* Extension */,
 				AAB3D6E31EF77C1700454C66 /* Common */,
 				AAB3D6E21EF77BF800454C66 /* Map display module */,
@@ -166,6 +171,7 @@
 			children = (
 				AAB3D6B51EF77B5E00454C66 /* Main.storyboard */,
 				AAB3D6BA1EF77B5E00454C66 /* LaunchScreen.storyboard */,
+				AAB3D7071EF7DD7F00454C66 /* Categories.plist */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -211,6 +217,14 @@
 				AAB3D6FD1EF78C4100454C66 /* UIViewController+Extension.swift */,
 			);
 			name = Extension;
+			sourceTree = "<group>";
+		};
+		AAB3D7091EF7DF6600454C66 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				AAB3D70A1EF7DF7500454C66 /* MPCategory.swift */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -323,6 +337,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AAB3D7081EF7DD7F00454C66 /* Categories.plist in Resources */,
 				AAB3D6BC1EF77B5E00454C66 /* LaunchScreen.storyboard in Resources */,
 				AAB3D6B91EF77B5E00454C66 /* Assets.xcassets in Resources */,
 				AAB3D6B71EF77B5E00454C66 /* Main.storyboard in Resources */,
@@ -350,6 +365,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AAB3D70B1EF7DF7500454C66 /* MPCategory.swift in Sources */,
 				AAB3D6FE1EF78C4100454C66 /* UIViewController+Extension.swift in Sources */,
 				AAB3D6ED1EF77C9100454C66 /* MPCategoryListviewController.swift in Sources */,
 				AAB3D6E71EF77C6800454C66 /* MPCategoryListRouter.swift in Sources */,
@@ -628,6 +644,7 @@
 				AAB3D6D81EF77B5F00454C66 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		AAB3D6D91EF77B5F00454C66 /* Build configuration list for PBXNativeTarget "MyPlaceTests" */ = {
 			isa = XCConfigurationList;
@@ -636,6 +653,7 @@
 				AAB3D6DB1EF77B5F00454C66 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		AAB3D6DC1EF77B5F00454C66 /* Build configuration list for PBXNativeTarget "MyPlaceUITests" */ = {
 			isa = XCConfigurationList;
@@ -644,6 +662,7 @@
 				AAB3D6DE1EF77B5F00454C66 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

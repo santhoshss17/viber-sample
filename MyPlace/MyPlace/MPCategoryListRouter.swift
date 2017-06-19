@@ -18,11 +18,11 @@ class  MPCategoryListRouter : CategoryListWireframe {
         let interactor = MPCategoryListInteractor()
         let presenter = MPCategoryListPresenter()
         
-        if let catListVC = UIViewController.viewController(storyboard : "MPCategoryListviewController") as? MPCategoryListviewController {
+        if let catListNavVC = UIViewController.viewController(storyboard : "MPCategoryNavListviewController") as? UINavigationController, let catListVC = catListNavVC.viewControllers.first as? MPCategoryListviewController {
             
-            router.viewController = catListVC
+            router.viewController = catListNavVC
+
             catListVC.presenter = presenter
-            
             presenter.view = catListVC
             presenter.interactor = interactor
             presenter.router = router
