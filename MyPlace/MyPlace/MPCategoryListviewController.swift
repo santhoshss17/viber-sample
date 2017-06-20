@@ -11,13 +11,6 @@ import UIKit
 class MPCategoryListviewController  :  UIViewController {
 
     var presenter: CategoryListPresenter!
-    var categories : [MPCategory]? {
-        
-        didSet {
-            
-            self.tableView.reloadData()
-        }
-    }
 
     @IBOutlet weak var tableView: UITableView!
     
@@ -35,9 +28,9 @@ extension MPCategoryListviewController : CategoryListView {
         self.title = title
     }
     
-    func updateCategories(categories : [MPCategory]) {
-        
-        self.categories = categories
+    func reloadCategories() {
+
+        self.tableView.reloadData()
     }
 }
 
@@ -45,21 +38,21 @@ extension MPCategoryListviewController : UITableViewDelegate,UITableViewDataSour
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
     
-        return self.categories?.count ?? 0
+        return self.presenter.categories?.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "CategoriesCell", for: indexPath)
-        cell.textLabel?.text = self.categories?[indexPath.row].title
-        cell.imageView?.image = self.categories?[indexPath.row].image
+        cell.textLabel?.text = self.presenter.categories?[indexPath.row].title
+        cell.imageView?.image = self.presenter.categories?[indexPath.row].image
         
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
-        if let selectedCategory = self.categories?[indexPath.row] {
+        if let selectedCategory = self.presenter.categories?[indexPath.row] {
             self.presenter.userDidSelect(category : selectedCategory)
         }
         

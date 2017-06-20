@@ -42,7 +42,7 @@ class MPCategoryStore {
         }
     }
     
-    func updateStore(category : MPCategory){
+    func updateCategories(category : [MPCategory], completion : ()->Void){
         
         
     }

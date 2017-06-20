@@ -134,6 +134,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AA793C671EF8FD3C00D56624 /* Network Service */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "Network Service";
+			sourceTree = "<group>";
+		};
 		AAB3D6A51EF77B5E00454C66 = {
 			isa = PBXGroup;
 			children = (
@@ -157,6 +164,7 @@
 		AAB3D6B01EF77B5E00454C66 /* MyPlace */ = {
 			isa = PBXGroup;
 			children = (
+				AA793C671EF8FD3C00D56624 /* Network Service */,
 				AAB3D7091EF7DF6600454C66 /* Model */,
 				AAB3D6FC1EF78C2100454C66 /* Extension */,
 				AAB3D6E31EF77C1700454C66 /* Common */,

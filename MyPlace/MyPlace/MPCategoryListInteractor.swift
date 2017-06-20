@@ -19,9 +19,4 @@ class MPCategoryListInteractor : CategoryListUseCase{
         }
     }
     
-    func updateCategoryRank(category : MPCategory) {
-        
-        category.rank += 1
-        MPCategoryStore.shared.updateStore(category : category)
-    }
 }

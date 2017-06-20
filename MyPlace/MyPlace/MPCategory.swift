@@ -38,4 +38,9 @@ class MPCategory : NSObject, NSCoding {
         aCoder.encode(image, forKey: "image")
         aCoder.encode(rank, forKey:"rank")
     }
+    
+    func incrementRank() {
+        
+        self.rank += 1
+    }
 }

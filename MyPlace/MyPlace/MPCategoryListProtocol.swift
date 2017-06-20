@@ -12,13 +12,14 @@ protocol CategoryListView : class {
     var presenter: CategoryListPresenter! { get set }
     
     func setTitle(title : String)
-    func updateCategories(categories : [MPCategory])
+    func reloadCategories()
 }
 
 protocol CategoryListPresenter: class {
     weak var view: CategoryListView! { get set }
     var interactor: CategoryListUseCase? { get set }
     var router: CategoryListWireframe! { get set }
+    var categories : [MPCategory]? { get }
     
     func viewReadyToConfigure()
     func userDidSelect(category : MPCategory)
@@ -28,7 +29,6 @@ protocol CategoryListUseCase: class {
     weak var output: CategoryListInteractorOutput! { get set }
     
     func fetchCategories(completion : ([MPCategory])->Void)
-    func updateCategoryRank(category : MPCategory)
 }
 
 protocol CategoryListInteractorOutput: class {
