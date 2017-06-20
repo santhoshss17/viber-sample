@@ -6,67 +6,67 @@
 		<key>title</key>
 		<string>Bakery</string>
 		<key>image</key>
-		<string></string>
+		<string>Bakery.png</string>
 	</dict>
 	<dict>
 		<key>title</key>
 		<string>Doctor</string>
 		<key>image</key>
-		<string></string>
+		<string>Doctor.png</string>
 	</dict>
 	<dict>
 		<key>title</key>
 		<string>School</string>
 		<key>image</key>
-		<string></string>
+		<string>School.png</string>
 	</dict>
 	<dict>
 		<key>title</key>
 		<string>Taxi_stand</string>
 		<key>image</key>
-		<string></string>
+		<string>Taxi.png</string>
 	</dict>
 	<dict>
 		<key>title</key>
 		<string>Hair_care</string>
 		<key>image</key>
-		<string></string>
+		<string>Hair.png</string>
 	</dict>
 	<dict>
 		<key>title</key>
 		<string>Restaurant</string>
 		<key>image</key>
-		<string></string>
+		<string>Restaurant.png</string>
 	</dict>
 	<dict>
 		<key>title</key>
 		<string>Pharmacy</string>
 		<key>image</key>
-		<string></string>
+		<string>Pharmacy.png</string>
 	</dict>
 	<dict>
 		<key>title</key>
 		<string>Atm</string>
 		<key>image</key>
-		<string></string>
+		<string>ATM.png</string>
 	</dict>
 	<dict>
 		<key>title</key>
 		<string>Gym</string>
 		<key>image</key>
-		<string></string>
+		<string>Gym.png</string>
 	</dict>
 	<dict>
 		<key>title</key>
 		<string>Store</string>
 		<key>image</key>
-		<string></string>
+		<string>Store.png</string>
 	</dict>
 	<dict>
 		<key>title</key>
 		<string>Spa</string>
 		<key>image</key>
-		<string></string>
+		<string>Spa.png</string>
 	</dict>
 </array>
 </plist>

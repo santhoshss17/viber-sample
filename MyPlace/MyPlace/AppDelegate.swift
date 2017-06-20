@@ -25,6 +25,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
         
         self.appDependency.loadRootRouter(window: window!)
+        self.applyAppTheme()
         
         return true
     }
@@ -51,6 +52,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
 
+    //MARK:- Helper Methods
+    
+    func applyAppTheme() {
+        
+        UINavigationBar.appearance().backgroundColor = UIColor(colorLiteralRed: 255.0/255.0, green: 211.0/255.0, blue: 0/255.0, alpha: 1.0)
+        UINavigationBar.appearance().barTintColor = UIColor(colorLiteralRed: 255.0/255.0, green: 211.0/255.0, blue: 0/255.0, alpha: 1.0)
 
+    }
+    
 }
 
