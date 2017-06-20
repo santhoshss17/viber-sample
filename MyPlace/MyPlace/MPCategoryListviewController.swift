@@ -11,6 +11,7 @@ import UIKit
 class MPCategoryListviewController  :  UIViewController {
 
     var presenter: CategoryListPresenter!
+    var categories : [MPCategory]?
 
     @IBOutlet weak var tableView: UITableView!
     
@@ -30,6 +31,9 @@ extension MPCategoryListviewController : CategoryListView {
     
     func reloadCategories() {
 
+        self.categories = self.presenter.categories
+        self.categories?.sort(by: {$0.rank > $1.rank})
+
         self.tableView.reloadData()
     }
 }
@@ -44,15 +48,15 @@ extension MPCategoryListviewController : UITableViewDelegate,UITableViewDataSour
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "CategoriesCell", for: indexPath)
-        cell.textLabel?.text = self.presenter.categories?[indexPath.row].title
-        cell.imageView?.image = self.presenter.categories?[indexPath.row].image
+        cell.textLabel?.text = self.categories?[indexPath.row].title
+        cell.imageView?.image = self.categories?[indexPath.row].image
         
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
-        if let selectedCategory = self.presenter.categories?[indexPath.row] {
+        if let selectedCategory = self.categories?[indexPath.row] {
             self.presenter.userDidSelect(category : selectedCategory)
         }
         

@@ -21,7 +21,6 @@ class MPCategoryListPresenter : CategoryListPresenter {
         self.interactor?.fetchCategories(completion: { (categories) in
             
             self.categories = categories
-            self.categories?.sort(by: {$0.rank > $1.rank})
             
             self.view.reloadCategories()
         })
@@ -37,7 +36,6 @@ class MPCategoryListPresenter : CategoryListPresenter {
     private func updateRank(category : MPCategory) {
         
         category.incrementRank()
-        self.categories?.sort(by: {$0.rank > $1.rank})
 
         self.view.reloadCategories()
     }
