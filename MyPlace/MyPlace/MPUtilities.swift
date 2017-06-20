@@ -7,3 +7,8 @@
 //
 
 import Foundation
+
+enum MPSortCategory {
+    case none
+    case rank
+}

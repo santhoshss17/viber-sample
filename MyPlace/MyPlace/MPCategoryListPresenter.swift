@@ -21,23 +21,20 @@ class MPCategoryListPresenter : CategoryListPresenter {
         self.interactor?.fetchCategories(completion: { (categories) in
             
             self.categories = categories
-            
-            self.view.reloadCategories()
+            self.view.reloadCategories(sort: .rank)
         })
     }
     
     func userDidSelect(category : MPCategory) {
         
         self.updateRank(category:category)
-        
         self.router.displayPlaceListView(category: category)
     }
     
     private func updateRank(category : MPCategory) {
         
         category.incrementRank()
-
-        self.view.reloadCategories()
+        self.view.reloadCategories(sort: .rank)
     }
 }
 

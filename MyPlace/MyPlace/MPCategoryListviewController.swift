@@ -9,7 +9,7 @@
 import UIKit
 
 class MPCategoryListviewController  :  UIViewController {
-
+    
     var presenter: CategoryListPresenter!
     var categories : [MPCategory]?
 
@@ -29,10 +29,17 @@ extension MPCategoryListviewController : CategoryListView {
         self.title = title
     }
     
-    func reloadCategories() {
+    func reloadCategories(sort : MPSortCategory = .rank) {
 
         self.categories = self.presenter.categories
-        self.categories?.sort(by: {$0.rank > $1.rank})
+        
+        switch sort {
+        case .rank:
+            self.categories?.sort(by: {$0.rank > $1.rank})
+            
+        default:
+            break
+        }
 
         self.tableView.reloadData()
     }

@@ -12,7 +12,7 @@ protocol CategoryListView : class {
     var presenter: CategoryListPresenter! { get set }
     
     func setTitle(title : String)
-    func reloadCategories()
+    func reloadCategories(sort : MPSortCategory)
 }
 
 protocol CategoryListPresenter: class {
