@@ -25,6 +25,8 @@ protocol CategoryListPresenter: class {
 
 protocol CategoryListUseCase: class {
     weak var output: CategoryListInteractorOutput! { get set }
+    
+    func fetchCategories(completion : ([MPCategory])->Void)
 }
 
 protocol CategoryListInteractorOutput: class {
