@@ -13,10 +13,16 @@ class MPPlaceListPresenter: PlaceListPresenter {
     weak var view: PlaceListView!
     var interactor: PlaceListUseCase?
     var router: PlaceListWireframe!
+    var category : MPCategory
+    
+    init(category : MPCategory) {
+        
+        self.category = category
+    }
     
     func viewReadyToConfigure() {
         
-        
+        self.view.setTitle(title: "Neaby - \(self.category.title)")
     }
 
 }

@@ -56,8 +56,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func applyAppTheme() {
         
-        UINavigationBar.appearance().backgroundColor = UIColor(colorLiteralRed: 255.0/255.0, green: 211.0/255.0, blue: 0/255.0, alpha: 1.0)
         UINavigationBar.appearance().barTintColor = UIColor(colorLiteralRed: 255.0/255.0, green: 211.0/255.0, blue: 0/255.0, alpha: 1.0)
+        UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName : UIColor.darkGray]
 
     }
     

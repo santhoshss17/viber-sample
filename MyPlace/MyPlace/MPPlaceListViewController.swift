@@ -11,6 +11,12 @@ import UIKit
 class MPPlaceListViewController : UIViewController  {
     
     var presenter: PlaceListPresenter!
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        self.presenter.viewReadyToConfigure()
+    }
 }
 
 extension MPPlaceListViewController : PlaceListView {

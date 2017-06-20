@@ -37,7 +37,11 @@ class  MPCategoryListRouter : CategoryListWireframe {
     
     func displayPlaceListView(category : MPCategory) {
         
+        let placeListViewController = MPPlaceListRouter.buildPlaceListModule(category: category)
         
+        if let navController = self.viewController as? UINavigationController {
+            navController.pushViewController(placeListViewController, animated: true)
+        }
     }
 }
 

@@ -62,6 +62,8 @@ extension MPCategoryListviewController : UITableViewDelegate,UITableViewDataSour
         if let selectedCategory = self.categories?[indexPath.row] {
             self.presenter.userDidSelect(category : selectedCategory)
         }
+        
+        tableView.deselectRow(at: indexPath, animated: true)
     }
 }
 
