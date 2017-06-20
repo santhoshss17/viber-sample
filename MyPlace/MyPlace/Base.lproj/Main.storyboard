@@ -73,10 +73,10 @@
             </objects>
             <point key="canvasLocation" x="124" y="138.98050974512745"/>
         </scene>
-        <!--View Controller-->
+        <!--Place List View Controller-->
         <scene sceneID="Gqa-K7-5e9">
             <objects>
-                <viewController id="EOP-rQ-PVY" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MPPlaceListViewController" id="EOP-rQ-PVY" customClass="MPPlaceListViewController" customModule="MyPlace" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="9b3-gN-8dO"/>
                         <viewControllerLayoutGuide type="bottom" id="kJW-dv-OIF"/>

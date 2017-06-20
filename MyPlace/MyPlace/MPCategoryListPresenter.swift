@@ -22,6 +22,12 @@ class MPCategoryListPresenter : CategoryListPresenter {
             self.view.updateCategories(categories: categories)
         })
     }
+    
+    func userDidSelect(category : MPCategory) {
+        
+        self.interactor?.updateCategoryRank(category : category)
+        self.router.displayPlaceListView(category: category)
+    }
 }
 
 extension MPCategoryListPresenter : CategoryListInteractorOutput {

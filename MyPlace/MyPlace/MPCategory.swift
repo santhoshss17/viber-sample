@@ -12,6 +12,7 @@ class MPCategory  {
     
     var title : String
     var image : UIImage?
+    var rank : Int = 0
     
     init(title : String, image : UIImage?) {
         self.title = title

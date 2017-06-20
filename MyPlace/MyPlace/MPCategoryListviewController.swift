@@ -59,7 +59,9 @@ extension MPCategoryListviewController : UITableViewDelegate,UITableViewDataSour
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
-        
+        if let selectedCategory = self.categories?[indexPath.row] {
+            self.presenter.userDidSelect(category : selectedCategory)
+        }
     }
 }
 

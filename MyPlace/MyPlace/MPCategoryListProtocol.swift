@@ -21,12 +21,14 @@ protocol CategoryListPresenter: class {
     var router: CategoryListWireframe! { get set }
     
     func viewReadyToConfigure()
+    func userDidSelect(category : MPCategory)
 }
 
 protocol CategoryListUseCase: class {
     weak var output: CategoryListInteractorOutput! { get set }
     
     func fetchCategories(completion : ([MPCategory])->Void)
+    func updateCategoryRank(category : MPCategory)
 }
 
 protocol CategoryListInteractorOutput: class {
@@ -35,4 +37,6 @@ protocol CategoryListInteractorOutput: class {
 
 protocol CategoryListWireframe: class {
     weak var viewController: UIViewController? { get set }
+    
+    func displayPlaceListView(category : MPCategory)
 }

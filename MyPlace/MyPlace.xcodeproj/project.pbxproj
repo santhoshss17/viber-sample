@@ -7,6 +7,24 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AA793C501EF8CF8500D56624 /* MPPlaceListProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA793C4F1EF8CF8500D56624 /* MPPlaceListProtocol.swift */; };
+		AA793C521EF8CF9D00D56624 /* MPPlaceListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA793C511EF8CF9D00D56624 /* MPPlaceListViewController.swift */; };
+		AA793C531EF8CF9D00D56624 /* MPPlaceListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA793C511EF8CF9D00D56624 /* MPPlaceListViewController.swift */; };
+		AA793C541EF8CF9D00D56624 /* MPPlaceListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA793C511EF8CF9D00D56624 /* MPPlaceListViewController.swift */; };
+		AA793C561EF8CFAB00D56624 /* MPPlaceListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA793C551EF8CFAB00D56624 /* MPPlaceListPresenter.swift */; };
+		AA793C571EF8CFAB00D56624 /* MPPlaceListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA793C551EF8CFAB00D56624 /* MPPlaceListPresenter.swift */; };
+		AA793C581EF8CFAB00D56624 /* MPPlaceListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA793C551EF8CFAB00D56624 /* MPPlaceListPresenter.swift */; };
+		AA793C5A1EF8CFBD00D56624 /* MPPlaceListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA793C591EF8CFBD00D56624 /* MPPlaceListInteractor.swift */; };
+		AA793C5B1EF8CFBD00D56624 /* MPPlaceListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA793C591EF8CFBD00D56624 /* MPPlaceListInteractor.swift */; };
+		AA793C5C1EF8CFBD00D56624 /* MPPlaceListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA793C591EF8CFBD00D56624 /* MPPlaceListInteractor.swift */; };
+		AA793C5E1EF8CFD600D56624 /* MPPlaceListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA793C5D1EF8CFD600D56624 /* MPPlaceListRouter.swift */; };
+		AA793C5F1EF8CFD600D56624 /* MPPlaceListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA793C5D1EF8CFD600D56624 /* MPPlaceListRouter.swift */; };
+		AA793C601EF8CFD600D56624 /* MPPlaceListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA793C5D1EF8CFD600D56624 /* MPPlaceListRouter.swift */; };
+		AA793C621EF8D59000D56624 /* MPCategoryStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA793C611EF8D59000D56624 /* MPCategoryStore.swift */; };
+		AA793C631EF8D59000D56624 /* MPCategoryStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA793C611EF8D59000D56624 /* MPCategoryStore.swift */; };
+		AA793C641EF8D59000D56624 /* MPCategoryStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA793C611EF8D59000D56624 /* MPCategoryStore.swift */; };
+		AA793C651EF8D63200D56624 /* MPPlaceListProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA793C4F1EF8CF8500D56624 /* MPPlaceListProtocol.swift */; };
+		AA793C661EF8D63300D56624 /* MPPlaceListProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA793C4F1EF8CF8500D56624 /* MPPlaceListProtocol.swift */; };
 		AAB3D6B21EF77B5E00454C66 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAB3D6B11EF77B5E00454C66 /* AppDelegate.swift */; };
 		AAB3D6B71EF77B5E00454C66 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AAB3D6B51EF77B5E00454C66 /* Main.storyboard */; };
 		AAB3D6B91EF77B5E00454C66 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AAB3D6B81EF77B5E00454C66 /* Assets.xcassets */; };
@@ -60,6 +78,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		AA793C4F1EF8CF8500D56624 /* MPPlaceListProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MPPlaceListProtocol.swift; sourceTree = "<group>"; };
+		AA793C511EF8CF9D00D56624 /* MPPlaceListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MPPlaceListViewController.swift; sourceTree = "<group>"; };
+		AA793C551EF8CFAB00D56624 /* MPPlaceListPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MPPlaceListPresenter.swift; sourceTree = "<group>"; };
+		AA793C591EF8CFBD00D56624 /* MPPlaceListInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MPPlaceListInteractor.swift; sourceTree = "<group>"; };
+		AA793C5D1EF8CFD600D56624 /* MPPlaceListRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MPPlaceListRouter.swift; sourceTree = "<group>"; };
+		AA793C611EF8D59000D56624 /* MPCategoryStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MPCategoryStore.swift; sourceTree = "<group>"; };
 		AAB3D6AE1EF77B5E00454C66 /* MyPlace.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyPlace.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AAB3D6B11EF77B5E00454C66 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AAB3D6B61EF77B5E00454C66 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -191,6 +215,11 @@
 		AAB3D6E11EF77BEB00454C66 /* Place list module */ = {
 			isa = PBXGroup;
 			children = (
+				AA793C4F1EF8CF8500D56624 /* MPPlaceListProtocol.swift */,
+				AA793C511EF8CF9D00D56624 /* MPPlaceListViewController.swift */,
+				AA793C551EF8CFAB00D56624 /* MPPlaceListPresenter.swift */,
+				AA793C591EF8CFBD00D56624 /* MPPlaceListInteractor.swift */,
+				AA793C5D1EF8CFD600D56624 /* MPPlaceListRouter.swift */,
 			);
 			name = "Place list module";
 			sourceTree = "<group>";
@@ -207,6 +236,7 @@
 			children = (
 				AAB3D6F41EF7816E00454C66 /* MPRootRouter.swift */,
 				AAB3D6F81EF78C0C00454C66 /* MPUtilities.swift */,
+				AA793C611EF8D59000D56624 /* MPCategoryStore.swift */,
 			);
 			name = Common;
 			sourceTree = "<group>";
@@ -366,14 +396,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				AAB3D70B1EF7DF7500454C66 /* MPCategory.swift in Sources */,
+				AA793C5E1EF8CFD600D56624 /* MPPlaceListRouter.swift in Sources */,
 				AAB3D6FE1EF78C4100454C66 /* UIViewController+Extension.swift in Sources */,
+				AA793C621EF8D59000D56624 /* MPCategoryStore.swift in Sources */,
 				AAB3D6ED1EF77C9100454C66 /* MPCategoryListviewController.swift in Sources */,
+				AA793C561EF8CFAB00D56624 /* MPPlaceListPresenter.swift in Sources */,
 				AAB3D6E71EF77C6800454C66 /* MPCategoryListRouter.swift in Sources */,
 				AAB3D6B21EF77B5E00454C66 /* AppDelegate.swift in Sources */,
 				AAB3D6F11EF77CAC00454C66 /* MPCategoryListInteractor.swift in Sources */,
+				AA793C5A1EF8CFBD00D56624 /* MPPlaceListInteractor.swift in Sources */,
 				AAB3D6E51EF77C3D00454C66 /* MPCategoryListProtocol.swift in Sources */,
 				AAB3D6F91EF78C0C00454C66 /* MPUtilities.swift in Sources */,
+				AA793C501EF8CF8500D56624 /* MPPlaceListProtocol.swift in Sources */,
 				AAB3D7021EF7936800454C66 /* MPAppDependency.swift in Sources */,
+				AA793C521EF8CF9D00D56624 /* MPPlaceListViewController.swift in Sources */,
 				AAB3D6E91EF77C8100454C66 /* MPCategoryListPresenter.swift in Sources */,
 				AAB3D6F51EF7816E00454C66 /* MPRootRouter.swift in Sources */,
 			);
@@ -388,8 +424,14 @@
 				AAB3D6C71EF77B5F00454C66 /* MyPlaceTests.swift in Sources */,
 				AAB3D6EE1EF77C9100454C66 /* MPCategoryListviewController.swift in Sources */,
 				AAB3D6FA1EF78C0C00454C66 /* MPUtilities.swift in Sources */,
+				AA793C651EF8D63200D56624 /* MPPlaceListProtocol.swift in Sources */,
+				AA793C531EF8CF9D00D56624 /* MPPlaceListViewController.swift in Sources */,
 				AAB3D6FF1EF78C4100454C66 /* UIViewController+Extension.swift in Sources */,
+				AA793C5B1EF8CFBD00D56624 /* MPPlaceListInteractor.swift in Sources */,
+				AA793C631EF8D59000D56624 /* MPCategoryStore.swift in Sources */,
+				AA793C571EF8CFAB00D56624 /* MPPlaceListPresenter.swift in Sources */,
 				AAB3D7031EF7936800454C66 /* MPAppDependency.swift in Sources */,
+				AA793C5F1EF8CFD600D56624 /* MPPlaceListRouter.swift in Sources */,
 				AAB3D6EA1EF77C8100454C66 /* MPCategoryListPresenter.swift in Sources */,
 				AAB3D6F21EF77CAC00454C66 /* MPCategoryListInteractor.swift in Sources */,
 			);
@@ -404,8 +446,14 @@
 				AAB3D6D21EF77B5F00454C66 /* MyPlaceUITests.swift in Sources */,
 				AAB3D6EF1EF77C9100454C66 /* MPCategoryListviewController.swift in Sources */,
 				AAB3D6FB1EF78C0C00454C66 /* MPUtilities.swift in Sources */,
+				AA793C661EF8D63300D56624 /* MPPlaceListProtocol.swift in Sources */,
+				AA793C541EF8CF9D00D56624 /* MPPlaceListViewController.swift in Sources */,
 				AAB3D7001EF78C4100454C66 /* UIViewController+Extension.swift in Sources */,
+				AA793C5C1EF8CFBD00D56624 /* MPPlaceListInteractor.swift in Sources */,
+				AA793C641EF8D59000D56624 /* MPCategoryStore.swift in Sources */,
+				AA793C581EF8CFAB00D56624 /* MPPlaceListPresenter.swift in Sources */,
 				AAB3D7041EF7936800454C66 /* MPAppDependency.swift in Sources */,
+				AA793C601EF8CFD600D56624 /* MPPlaceListRouter.swift in Sources */,
 				AAB3D6EB1EF77C8100454C66 /* MPCategoryListPresenter.swift in Sources */,
 				AAB3D6F31EF77CAC00454C66 /* MPCategoryListInteractor.swift in Sources */,
 			);

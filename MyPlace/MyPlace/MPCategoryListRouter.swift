@@ -34,6 +34,11 @@ class  MPCategoryListRouter : CategoryListWireframe {
         
         return router.viewController!
     }
+    
+    func displayPlaceListView(category : MPCategory) {
+        
+        
+    }
 }
 
 extension MPCategoryListRouter : MPRootRouter {
