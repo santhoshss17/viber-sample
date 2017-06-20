@@ -23,8 +23,8 @@ class MPPlaceListPresenter: PlaceListPresenter {
     func viewReadyToConfigure() {
         
         self.view.setTitle(title: "Neaby - \(self.category.title)")
+        self.interactor?.fetchNearbyPlace(category : category)
     }
-
 }
 
 extension MPPlaceListPresenter : PlaceListInteractorOutput {

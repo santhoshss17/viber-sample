@@ -12,3 +12,7 @@ enum MPSortCategory {
     case none
     case rank
 }
+
+let kGAPIKey = "AIzaSyBRXKxz7WL2-5iXecdh8-O9g3qO9JR1ohM"
+let kGAPIPlace = "https://maps.googleapis.com/maps/api/place/nearbysearch/json"
+

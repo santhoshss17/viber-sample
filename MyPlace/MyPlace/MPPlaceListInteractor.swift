@@ -11,4 +11,12 @@ import Foundation
 class MPPlaceListInteractor: PlaceListUseCase {
     weak var output: PlaceListInteractorOutput!
 
+    func fetchNearbyPlace(category : MPCategory) {
+        
+        MPPlaceNetworkService().fetchPlace(nearBy: 500, category: category.title) { 
+            
+            
+        }
+    }
+
 }

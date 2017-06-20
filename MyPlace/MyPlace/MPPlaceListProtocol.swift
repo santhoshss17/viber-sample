@@ -25,6 +25,7 @@ protocol PlaceListPresenter: class {
 protocol PlaceListUseCase: class {
     weak var output: PlaceListInteractorOutput! { get set }
     
+    func fetchNearbyPlace(category : MPCategory)
 }
 
 protocol PlaceListInteractorOutput: class {
