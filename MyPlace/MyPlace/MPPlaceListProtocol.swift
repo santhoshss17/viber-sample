@@ -22,6 +22,7 @@ protocol PlaceListPresenter: class {
     var places: [MPPlace] {get}
     
     func viewReadyToConfigure()
+    func didSelectPlace(place : MPPlace)
 }
 
 protocol PlaceListUseCase: class {
@@ -37,4 +38,6 @@ protocol PlaceListInteractorOutput: class {
 
 protocol PlaceListWireframe: class {
     weak var viewController: UIViewController? { get set }
+    
+    func displayMap(for place:MPPlace)
 }

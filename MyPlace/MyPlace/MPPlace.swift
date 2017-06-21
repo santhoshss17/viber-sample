@@ -12,8 +12,26 @@ class MPPlace {
     
     enum MPPlaceState : String {
         case open = "Open"
-        case close = "Close"
+        case close = "Closed"
         case notApplicable = "NA"
+        
+        func bgColor() -> UIColor {
+            
+            switch self {
+            case .open:
+                return UIColor.init(colorLiteralRed: 3/255.0, green: 137/255.0, blue: 22/255.0, alpha: 1.0)
+            case .close:
+                return UIColor.init(colorLiteralRed: 160/255.0, green: 10/255.0, blue: 25/255.0, alpha: 1.0)
+            default:
+                return UIColor.clear
+            }
+        }
+    }
+    
+    struct MPLocation {
+        
+        var latitude : Double
+        var longitude : Double
     }
     
     var id : String
@@ -23,6 +41,7 @@ class MPPlace {
     var photoRef : String?
     var photo : UIImage?
     var placeState : MPPlaceState = .notApplicable
+    var location : MPLocation?
     
     init(id :String, name : String) {
         self.id = id
@@ -37,7 +56,7 @@ class MPPlace {
             return nil
         }
         
-        self.init(id: name, name: id)
+        self.init(id: id, name: name)
         
         //Photo Ref
         if let photosRes = jsonResponse["photos"] as? [AnyObject], photosRes.count > 0{
@@ -53,6 +72,11 @@ class MPPlace {
         if let placeStateJson = jsonResponse["opening_hours"] as? [String : AnyObject], let state = placeStateJson["open_now"] as? Bool{
 
             self.placeState = (state) ? .open : .close
+        }
+        
+        if let photosRes = jsonResponse["geometry"] as? [String : AnyObject], let lat = photosRes["location"]?["lat"] as? Double, let lng = photosRes["location"]?["lng"] as? Double{
+
+            self.location = MPLocation(latitude: lat, longitude: lng)
         }
     }
     

@@ -27,11 +27,11 @@ class MPPlaceCollectionViewCell: UICollectionViewCell {
         self.types.text = self.place?.typesDescription()
         
         self.placeState.isHidden = true
-        if let placeState = self.place?.placeState {
+        if let placeState = self.place?.placeState, self.place?.placeState != .notApplicable {
 
             self.placeState.isHidden = false
             self.placeState.text = placeState.rawValue
-            self.placeState.textColor = (placeState == .open) ? UIColor.green : UIColor.red
+            self.placeState.backgroundColor = placeState.bgColor()
         }
     }
 }

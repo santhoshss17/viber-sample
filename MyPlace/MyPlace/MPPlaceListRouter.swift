@@ -30,9 +30,14 @@ class MPPlaceListRouter : PlaceListWireframe {
             interactor.output = presenter
         }
         
-        assert(router.viewController != nil, "Root view cannot be nil")
+        assert(router.viewController != nil, "Place List view cannot be nil")
         
         return router.viewController!
     }
 
+    func displayMap(for place:MPPlace) {
+        
+        let mapDisplayViewController = MPMapDisplayRouter.buildMapDisplayModule(place: place)
+        self.viewController?.navigationController?.pushViewController(mapDisplayViewController, animated: true)
+    }
 }

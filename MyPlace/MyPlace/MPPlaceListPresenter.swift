@@ -26,6 +26,11 @@ class MPPlaceListPresenter: PlaceListPresenter {
         self.view.setTitle(title: "Neaby - \(self.category.title)")
         self.interactor?.fetchNearbyPlace(category : category)
     }
+    
+    func didSelectPlace(place : MPPlace) {
+        
+        self.router.displayMap(for : place)
+    }
 }
 
 extension MPPlaceListPresenter : PlaceListInteractorOutput {

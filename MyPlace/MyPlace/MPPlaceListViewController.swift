@@ -49,4 +49,10 @@ extension MPPlaceListViewController : UICollectionViewDelegate, UICollectionView
         
         return cell
     }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
+        let place = self.presenter.places[indexPath.row]
+        self.presenter.didSelectPlace(place: place)
+    }
 }

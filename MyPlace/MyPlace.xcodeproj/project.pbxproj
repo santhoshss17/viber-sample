@@ -12,6 +12,21 @@
 		65B3B0372466E80560F936CC /* Pods_MyPlace.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FFB96CE7A9DC2EEECFAA80E7 /* Pods_MyPlace.framework */; };
 		AA77AE661EFA08B8004BE076 /* MPPlace.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA77AE651EFA08B8004BE076 /* MPPlace.swift */; };
 		AA77AE681EFA2AB0004BE076 /* MPPlaceCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA77AE671EFA2AB0004BE076 /* MPPlaceCollectionViewCell.swift */; };
+		AA77AE6A1EFA4D45004BE076 /* MPMapDisplayProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA77AE691EFA4D45004BE076 /* MPMapDisplayProtocol.swift */; };
+		AA77AE6B1EFA4D45004BE076 /* MPMapDisplayProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA77AE691EFA4D45004BE076 /* MPMapDisplayProtocol.swift */; };
+		AA77AE6C1EFA4D45004BE076 /* MPMapDisplayProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA77AE691EFA4D45004BE076 /* MPMapDisplayProtocol.swift */; };
+		AA77AE6E1EFA4DCA004BE076 /* MPMapDisplayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA77AE6D1EFA4DCA004BE076 /* MPMapDisplayViewController.swift */; };
+		AA77AE6F1EFA4DCA004BE076 /* MPMapDisplayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA77AE6D1EFA4DCA004BE076 /* MPMapDisplayViewController.swift */; };
+		AA77AE701EFA4DCA004BE076 /* MPMapDisplayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA77AE6D1EFA4DCA004BE076 /* MPMapDisplayViewController.swift */; };
+		AA77AE721EFA4DDA004BE076 /* MPMapDisplayPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA77AE711EFA4DDA004BE076 /* MPMapDisplayPresenter.swift */; };
+		AA77AE731EFA4DDA004BE076 /* MPMapDisplayPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA77AE711EFA4DDA004BE076 /* MPMapDisplayPresenter.swift */; };
+		AA77AE741EFA4DDA004BE076 /* MPMapDisplayPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA77AE711EFA4DDA004BE076 /* MPMapDisplayPresenter.swift */; };
+		AA77AE761EFA4DEB004BE076 /* MPMapDisplayInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA77AE751EFA4DEB004BE076 /* MPMapDisplayInteractor.swift */; };
+		AA77AE771EFA4DEB004BE076 /* MPMapDisplayInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA77AE751EFA4DEB004BE076 /* MPMapDisplayInteractor.swift */; };
+		AA77AE781EFA4DEB004BE076 /* MPMapDisplayInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA77AE751EFA4DEB004BE076 /* MPMapDisplayInteractor.swift */; };
+		AA77AE7A1EFA4DF9004BE076 /* MPMapDisplayRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA77AE791EFA4DF9004BE076 /* MPMapDisplayRouter.swift */; };
+		AA77AE7B1EFA4DF9004BE076 /* MPMapDisplayRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA77AE791EFA4DF9004BE076 /* MPMapDisplayRouter.swift */; };
+		AA77AE7C1EFA4DF9004BE076 /* MPMapDisplayRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA77AE791EFA4DF9004BE076 /* MPMapDisplayRouter.swift */; };
 		AA793C501EF8CF8500D56624 /* MPPlaceListProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA793C4F1EF8CF8500D56624 /* MPPlaceListProtocol.swift */; };
 		AA793C521EF8CF9D00D56624 /* MPPlaceListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA793C511EF8CF9D00D56624 /* MPPlaceListViewController.swift */; };
 		AA793C531EF8CF9D00D56624 /* MPPlaceListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA793C511EF8CF9D00D56624 /* MPPlaceListViewController.swift */; };
@@ -94,6 +109,11 @@
 		882A6E664FF58A3F760584D9 /* Pods-MyPlaceUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyPlaceUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyPlaceUITests/Pods-MyPlaceUITests.release.xcconfig"; sourceTree = "<group>"; };
 		AA77AE651EFA08B8004BE076 /* MPPlace.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MPPlace.swift; sourceTree = "<group>"; };
 		AA77AE671EFA2AB0004BE076 /* MPPlaceCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MPPlaceCollectionViewCell.swift; sourceTree = "<group>"; };
+		AA77AE691EFA4D45004BE076 /* MPMapDisplayProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MPMapDisplayProtocol.swift; sourceTree = "<group>"; };
+		AA77AE6D1EFA4DCA004BE076 /* MPMapDisplayViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MPMapDisplayViewController.swift; sourceTree = "<group>"; };
+		AA77AE711EFA4DDA004BE076 /* MPMapDisplayPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MPMapDisplayPresenter.swift; sourceTree = "<group>"; };
+		AA77AE751EFA4DEB004BE076 /* MPMapDisplayInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MPMapDisplayInteractor.swift; sourceTree = "<group>"; };
+		AA77AE791EFA4DF9004BE076 /* MPMapDisplayRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MPMapDisplayRouter.swift; sourceTree = "<group>"; };
 		AA793C4F1EF8CF8500D56624 /* MPPlaceListProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MPPlaceListProtocol.swift; sourceTree = "<group>"; };
 		AA793C511EF8CF9D00D56624 /* MPPlaceListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MPPlaceListViewController.swift; sourceTree = "<group>"; };
 		AA793C551EF8CFAB00D56624 /* MPPlaceListPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MPPlaceListPresenter.swift; sourceTree = "<group>"; };
@@ -277,6 +297,11 @@
 		AAB3D6E21EF77BF800454C66 /* Map display module */ = {
 			isa = PBXGroup;
 			children = (
+				AA77AE691EFA4D45004BE076 /* MPMapDisplayProtocol.swift */,
+				AA77AE6D1EFA4DCA004BE076 /* MPMapDisplayViewController.swift */,
+				AA77AE711EFA4DDA004BE076 /* MPMapDisplayPresenter.swift */,
+				AA77AE751EFA4DEB004BE076 /* MPMapDisplayInteractor.swift */,
+				AA77AE791EFA4DF9004BE076 /* MPMapDisplayRouter.swift */,
 			);
 			name = "Map display module";
 			sourceTree = "<group>";
@@ -608,6 +633,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AA77AE761EFA4DEB004BE076 /* MPMapDisplayInteractor.swift in Sources */,
 				AAB3D70B1EF7DF7500454C66 /* MPCategory.swift in Sources */,
 				AA793C5E1EF8CFD600D56624 /* MPPlaceListRouter.swift in Sources */,
 				AA77AE661EFA08B8004BE076 /* MPPlace.swift in Sources */,
@@ -616,13 +642,17 @@
 				AAB3D6FE1EF78C4100454C66 /* UIViewController+Extension.swift in Sources */,
 				AA793C621EF8D59000D56624 /* MPCategoryStore.swift in Sources */,
 				AA793C691EF91AA900D56624 /* MPNetworkService.swift in Sources */,
+				AA77AE6A1EFA4D45004BE076 /* MPMapDisplayProtocol.swift in Sources */,
+				AA77AE721EFA4DDA004BE076 /* MPMapDisplayPresenter.swift in Sources */,
 				AAB3D6ED1EF77C9100454C66 /* MPCategoryListviewController.swift in Sources */,
 				AA793C561EF8CFAB00D56624 /* MPPlaceListPresenter.swift in Sources */,
 				AAB3D6E71EF77C6800454C66 /* MPCategoryListRouter.swift in Sources */,
 				AA793C6F1EF9258D00D56624 /* MPResponse.swift in Sources */,
 				AAB3D6B21EF77B5E00454C66 /* AppDelegate.swift in Sources */,
 				AAB3D6F11EF77CAC00454C66 /* MPCategoryListInteractor.swift in Sources */,
+				AA77AE7A1EFA4DF9004BE076 /* MPMapDisplayRouter.swift in Sources */,
 				AA793C5A1EF8CFBD00D56624 /* MPPlaceListInteractor.swift in Sources */,
+				AA77AE6E1EFA4DCA004BE076 /* MPMapDisplayViewController.swift in Sources */,
 				AA793C6D1EF9250200D56624 /* MPRequest.swift in Sources */,
 				AAB3D6E51EF77C3D00454C66 /* MPCategoryListProtocol.swift in Sources */,
 				AAB3D6F91EF78C0C00454C66 /* MPUtilities.swift in Sources */,
@@ -639,16 +669,21 @@
 			buildActionMask = 2147483647;
 			files = (
 				AAB3D7051EF794E900454C66 /* MPCategoryListRouter.swift in Sources */,
+				AA77AE6F1EFA4DCA004BE076 /* MPMapDisplayViewController.swift in Sources */,
 				AAB3D6F61EF7816E00454C66 /* MPRootRouter.swift in Sources */,
 				AAB3D6C71EF77B5F00454C66 /* MyPlaceTests.swift in Sources */,
 				AAB3D6EE1EF77C9100454C66 /* MPCategoryListviewController.swift in Sources */,
 				AAB3D6FA1EF78C0C00454C66 /* MPUtilities.swift in Sources */,
 				AA793C651EF8D63200D56624 /* MPPlaceListProtocol.swift in Sources */,
+				AA77AE731EFA4DDA004BE076 /* MPMapDisplayPresenter.swift in Sources */,
 				AA793C531EF8CF9D00D56624 /* MPPlaceListViewController.swift in Sources */,
+				AA77AE7B1EFA4DF9004BE076 /* MPMapDisplayRouter.swift in Sources */,
 				AAB3D6FF1EF78C4100454C66 /* UIViewController+Extension.swift in Sources */,
+				AA77AE6B1EFA4D45004BE076 /* MPMapDisplayProtocol.swift in Sources */,
 				AA793C5B1EF8CFBD00D56624 /* MPPlaceListInteractor.swift in Sources */,
 				AA793C631EF8D59000D56624 /* MPCategoryStore.swift in Sources */,
 				AA793C571EF8CFAB00D56624 /* MPPlaceListPresenter.swift in Sources */,
+				AA77AE771EFA4DEB004BE076 /* MPMapDisplayInteractor.swift in Sources */,
 				AAB3D7031EF7936800454C66 /* MPAppDependency.swift in Sources */,
 				AA793C5F1EF8CFD600D56624 /* MPPlaceListRouter.swift in Sources */,
 				AAB3D6EA1EF77C8100454C66 /* MPCategoryListPresenter.swift in Sources */,
@@ -661,16 +696,21 @@
 			buildActionMask = 2147483647;
 			files = (
 				AAB3D7061EF794EA00454C66 /* MPCategoryListRouter.swift in Sources */,
+				AA77AE701EFA4DCA004BE076 /* MPMapDisplayViewController.swift in Sources */,
 				AAB3D6F71EF7816E00454C66 /* MPRootRouter.swift in Sources */,
 				AAB3D6D21EF77B5F00454C66 /* MyPlaceUITests.swift in Sources */,
 				AAB3D6EF1EF77C9100454C66 /* MPCategoryListviewController.swift in Sources */,
 				AAB3D6FB1EF78C0C00454C66 /* MPUtilities.swift in Sources */,
 				AA793C661EF8D63300D56624 /* MPPlaceListProtocol.swift in Sources */,
+				AA77AE741EFA4DDA004BE076 /* MPMapDisplayPresenter.swift in Sources */,
 				AA793C541EF8CF9D00D56624 /* MPPlaceListViewController.swift in Sources */,
+				AA77AE7C1EFA4DF9004BE076 /* MPMapDisplayRouter.swift in Sources */,
 				AAB3D7001EF78C4100454C66 /* UIViewController+Extension.swift in Sources */,
+				AA77AE6C1EFA4D45004BE076 /* MPMapDisplayProtocol.swift in Sources */,
 				AA793C5C1EF8CFBD00D56624 /* MPPlaceListInteractor.swift in Sources */,
 				AA793C641EF8D59000D56624 /* MPCategoryStore.swift in Sources */,
 				AA793C581EF8CFAB00D56624 /* MPPlaceListPresenter.swift in Sources */,
+				AA77AE781EFA4DEB004BE076 /* MPMapDisplayInteractor.swift in Sources */,
 				AAB3D7041EF7936800454C66 /* MPAppDependency.swift in Sources */,
 				AA793C601EF8CFD600D56624 /* MPPlaceListRouter.swift in Sources */,
 				AAB3D6EB1EF77C8100454C66 /* MPCategoryListPresenter.swift in Sources */,
