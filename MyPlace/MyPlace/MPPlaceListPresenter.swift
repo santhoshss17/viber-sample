@@ -14,6 +14,7 @@ class MPPlaceListPresenter: PlaceListPresenter {
     var interactor: PlaceListUseCase?
     var router: PlaceListWireframe!
     var category : MPCategory
+    var places : [MPPlace] = [MPPlace]()
     
     init(category : MPCategory) {
         
@@ -31,6 +32,8 @@ extension MPPlaceListPresenter : PlaceListInteractorOutput {
     
     func didFetchPlaces(places : [MPPlace]) {
         
+        self.places.append(contentsOf: places)
+        self.view.reloadPlaces()
         print("Found Places - \(places.count)")
     }
 }

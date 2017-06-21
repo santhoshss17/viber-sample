@@ -11,6 +11,7 @@
 		55A88CC3E0CED3065E566D72 /* Pods_MyPlaceUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCE067B115D7DBDB35D7C81A /* Pods_MyPlaceUITests.framework */; };
 		65B3B0372466E80560F936CC /* Pods_MyPlace.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FFB96CE7A9DC2EEECFAA80E7 /* Pods_MyPlace.framework */; };
 		AA77AE661EFA08B8004BE076 /* MPPlace.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA77AE651EFA08B8004BE076 /* MPPlace.swift */; };
+		AA77AE681EFA2AB0004BE076 /* MPPlaceCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA77AE671EFA2AB0004BE076 /* MPPlaceCollectionViewCell.swift */; };
 		AA793C501EF8CF8500D56624 /* MPPlaceListProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA793C4F1EF8CF8500D56624 /* MPPlaceListProtocol.swift */; };
 		AA793C521EF8CF9D00D56624 /* MPPlaceListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA793C511EF8CF9D00D56624 /* MPPlaceListViewController.swift */; };
 		AA793C531EF8CF9D00D56624 /* MPPlaceListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA793C511EF8CF9D00D56624 /* MPPlaceListViewController.swift */; };
@@ -92,6 +93,7 @@
 		864CBD185519C16427A51734 /* Pods-MyPlaceTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyPlaceTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyPlaceTests/Pods-MyPlaceTests.release.xcconfig"; sourceTree = "<group>"; };
 		882A6E664FF58A3F760584D9 /* Pods-MyPlaceUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyPlaceUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyPlaceUITests/Pods-MyPlaceUITests.release.xcconfig"; sourceTree = "<group>"; };
 		AA77AE651EFA08B8004BE076 /* MPPlace.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MPPlace.swift; sourceTree = "<group>"; };
+		AA77AE671EFA2AB0004BE076 /* MPPlaceCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MPPlaceCollectionViewCell.swift; sourceTree = "<group>"; };
 		AA793C4F1EF8CF8500D56624 /* MPPlaceListProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MPPlaceListProtocol.swift; sourceTree = "<group>"; };
 		AA793C511EF8CF9D00D56624 /* MPPlaceListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MPPlaceListViewController.swift; sourceTree = "<group>"; };
 		AA793C551EF8CFAB00D56624 /* MPPlaceListPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MPPlaceListPresenter.swift; sourceTree = "<group>"; };
@@ -267,6 +269,7 @@
 				AA793C551EF8CFAB00D56624 /* MPPlaceListPresenter.swift */,
 				AA793C591EF8CFBD00D56624 /* MPPlaceListInteractor.swift */,
 				AA793C5D1EF8CFD600D56624 /* MPPlaceListRouter.swift */,
+				AA77AE671EFA2AB0004BE076 /* MPPlaceCollectionViewCell.swift */,
 			);
 			name = "Place list module";
 			sourceTree = "<group>";
@@ -608,6 +611,7 @@
 				AAB3D70B1EF7DF7500454C66 /* MPCategory.swift in Sources */,
 				AA793C5E1EF8CFD600D56624 /* MPPlaceListRouter.swift in Sources */,
 				AA77AE661EFA08B8004BE076 /* MPPlace.swift in Sources */,
+				AA77AE681EFA2AB0004BE076 /* MPPlaceCollectionViewCell.swift in Sources */,
 				AA793C6B1EF91ADF00D56624 /* MPPlaceNetworkService.swift in Sources */,
 				AAB3D6FE1EF78C4100454C66 /* UIViewController+Extension.swift in Sources */,
 				AA793C621EF8D59000D56624 /* MPCategoryStore.swift in Sources */,

@@ -12,12 +12,14 @@ protocol PlaceListView : class {
     var presenter: PlaceListPresenter! { get set }
     
     func setTitle(title : String)
+    func reloadPlaces()
 }
 
 protocol PlaceListPresenter: class {
     weak var view: PlaceListView! { get set }
     var interactor: PlaceListUseCase? { get set }
     var router: PlaceListWireframe! { get set }
+    var places: [MPPlace] {get}
     
     func viewReadyToConfigure()
 }

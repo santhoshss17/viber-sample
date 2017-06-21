@@ -10,10 +10,10 @@ import UIKit
 
 class MPPlace {
     
-    enum MPPlaceState {
-        case open
-        case close
-        case notApplicable
+    enum MPPlaceState : String {
+        case open = "Open"
+        case close = "Close"
+        case notApplicable = "NA"
     }
     
     var id : String
@@ -21,6 +21,7 @@ class MPPlace {
     var vicinity : String?
     var types : [String]?
     var photoRef : String?
+    var photo : UIImage?
     var placeState : MPPlaceState = .notApplicable
     
     init(id :String, name : String) {
@@ -53,5 +54,19 @@ class MPPlace {
 
             self.placeState = (state) ? .open : .close
         }
+    }
+    
+    func typesDescription() -> String {
+        
+        var typesDescription : String = ""
+        if let types = self.types {
+            
+            for type in types {
+                
+                typesDescription += "\(type), "
+            }
+        }
+        
+        return typesDescription
     }
 }
