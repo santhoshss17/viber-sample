@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreLocation
 
 protocol PlaceListView : class {
     var presenter: PlaceListPresenter! { get set }
@@ -28,7 +29,7 @@ protocol PlaceListPresenter: class {
 protocol PlaceListUseCase: class {
     weak var output: PlaceListInteractorOutput! { get set }
     
-    func fetchNearbyPlace(category : MPCategory)
+    func fetchNearbyPlace(location : CLLocationCoordinate2D, category : MPCategory)
 }
 
 protocol PlaceListInteractorOutput: class {

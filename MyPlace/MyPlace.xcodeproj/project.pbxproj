@@ -27,6 +27,13 @@
 		AA77AE7A1EFA4DF9004BE076 /* MPMapDisplayRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA77AE791EFA4DF9004BE076 /* MPMapDisplayRouter.swift */; };
 		AA77AE7B1EFA4DF9004BE076 /* MPMapDisplayRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA77AE791EFA4DF9004BE076 /* MPMapDisplayRouter.swift */; };
 		AA77AE7C1EFA4DF9004BE076 /* MPMapDisplayRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA77AE791EFA4DF9004BE076 /* MPMapDisplayRouter.swift */; };
+		AA77AE7F1EFA75D7004BE076 /* MPLocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA77AE7E1EFA75D7004BE076 /* MPLocationManager.swift */; };
+		AA77AE801EFA75D7004BE076 /* MPLocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA77AE7E1EFA75D7004BE076 /* MPLocationManager.swift */; };
+		AA77AE811EFA75D7004BE076 /* MPLocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA77AE7E1EFA75D7004BE076 /* MPLocationManager.swift */; };
+		AA77AE831EFA7601004BE076 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA77AE821EFA7601004BE076 /* CoreLocation.framework */; };
+		AA77AE851EFA7EB3004BE076 /* MPConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA77AE841EFA7EB3004BE076 /* MPConstants.swift */; };
+		AA77AE861EFA7EB3004BE076 /* MPConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA77AE841EFA7EB3004BE076 /* MPConstants.swift */; };
+		AA77AE871EFA7EB3004BE076 /* MPConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA77AE841EFA7EB3004BE076 /* MPConstants.swift */; };
 		AA793C501EF8CF8500D56624 /* MPPlaceListProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA793C4F1EF8CF8500D56624 /* MPPlaceListProtocol.swift */; };
 		AA793C521EF8CF9D00D56624 /* MPPlaceListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA793C511EF8CF9D00D56624 /* MPPlaceListViewController.swift */; };
 		AA793C531EF8CF9D00D56624 /* MPPlaceListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA793C511EF8CF9D00D56624 /* MPPlaceListViewController.swift */; };
@@ -69,9 +76,6 @@
 		AAB3D6F51EF7816E00454C66 /* MPRootRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAB3D6F41EF7816E00454C66 /* MPRootRouter.swift */; };
 		AAB3D6F61EF7816E00454C66 /* MPRootRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAB3D6F41EF7816E00454C66 /* MPRootRouter.swift */; };
 		AAB3D6F71EF7816E00454C66 /* MPRootRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAB3D6F41EF7816E00454C66 /* MPRootRouter.swift */; };
-		AAB3D6F91EF78C0C00454C66 /* MPUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAB3D6F81EF78C0C00454C66 /* MPUtilities.swift */; };
-		AAB3D6FA1EF78C0C00454C66 /* MPUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAB3D6F81EF78C0C00454C66 /* MPUtilities.swift */; };
-		AAB3D6FB1EF78C0C00454C66 /* MPUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAB3D6F81EF78C0C00454C66 /* MPUtilities.swift */; };
 		AAB3D6FE1EF78C4100454C66 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAB3D6FD1EF78C4100454C66 /* UIViewController+Extension.swift */; };
 		AAB3D6FF1EF78C4100454C66 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAB3D6FD1EF78C4100454C66 /* UIViewController+Extension.swift */; };
 		AAB3D7001EF78C4100454C66 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAB3D6FD1EF78C4100454C66 /* UIViewController+Extension.swift */; };
@@ -114,6 +118,9 @@
 		AA77AE711EFA4DDA004BE076 /* MPMapDisplayPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MPMapDisplayPresenter.swift; sourceTree = "<group>"; };
 		AA77AE751EFA4DEB004BE076 /* MPMapDisplayInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MPMapDisplayInteractor.swift; sourceTree = "<group>"; };
 		AA77AE791EFA4DF9004BE076 /* MPMapDisplayRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MPMapDisplayRouter.swift; sourceTree = "<group>"; };
+		AA77AE7E1EFA75D7004BE076 /* MPLocationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MPLocationManager.swift; sourceTree = "<group>"; };
+		AA77AE821EFA7601004BE076 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		AA77AE841EFA7EB3004BE076 /* MPConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MPConstants.swift; sourceTree = "<group>"; };
 		AA793C4F1EF8CF8500D56624 /* MPPlaceListProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MPPlaceListProtocol.swift; sourceTree = "<group>"; };
 		AA793C511EF8CF9D00D56624 /* MPPlaceListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MPPlaceListViewController.swift; sourceTree = "<group>"; };
 		AA793C551EF8CFAB00D56624 /* MPPlaceListPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MPPlaceListPresenter.swift; sourceTree = "<group>"; };
@@ -142,7 +149,6 @@
 		AAB3D6EC1EF77C9100454C66 /* MPCategoryListviewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MPCategoryListviewController.swift; sourceTree = "<group>"; };
 		AAB3D6F01EF77CAC00454C66 /* MPCategoryListInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MPCategoryListInteractor.swift; sourceTree = "<group>"; };
 		AAB3D6F41EF7816E00454C66 /* MPRootRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MPRootRouter.swift; sourceTree = "<group>"; };
-		AAB3D6F81EF78C0C00454C66 /* MPUtilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MPUtilities.swift; sourceTree = "<group>"; };
 		AAB3D6FD1EF78C4100454C66 /* UIViewController+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
 		AAB3D7011EF7936800454C66 /* MPAppDependency.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MPAppDependency.swift; sourceTree = "<group>"; };
 		AAB3D7071EF7DD7F00454C66 /* Categories.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Categories.plist; sourceTree = "<group>"; };
@@ -158,6 +164,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AA77AE831EFA7601004BE076 /* CoreLocation.framework in Frameworks */,
 				65B3B0372466E80560F936CC /* Pods_MyPlace.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -184,6 +191,7 @@
 		88D71259A71597AD662B4A6E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				AA77AE821EFA7601004BE076 /* CoreLocation.framework */,
 				FFB96CE7A9DC2EEECFAA80E7 /* Pods_MyPlace.framework */,
 				B1B6820AA49341B8DE060837 /* Pods_MyPlaceTests.framework */,
 				FCE067B115D7DBDB35D7C81A /* Pods_MyPlaceUITests.framework */,
@@ -310,8 +318,9 @@
 			isa = PBXGroup;
 			children = (
 				AAB3D6F41EF7816E00454C66 /* MPRootRouter.swift */,
-				AAB3D6F81EF78C0C00454C66 /* MPUtilities.swift */,
+				AA77AE841EFA7EB3004BE076 /* MPConstants.swift */,
 				AA793C611EF8D59000D56624 /* MPCategoryStore.swift */,
+				AA77AE7E1EFA75D7004BE076 /* MPLocationManager.swift */,
 			);
 			name = Common;
 			sourceTree = "<group>";
@@ -641,6 +650,7 @@
 				AA793C6B1EF91ADF00D56624 /* MPPlaceNetworkService.swift in Sources */,
 				AAB3D6FE1EF78C4100454C66 /* UIViewController+Extension.swift in Sources */,
 				AA793C621EF8D59000D56624 /* MPCategoryStore.swift in Sources */,
+				AA77AE7F1EFA75D7004BE076 /* MPLocationManager.swift in Sources */,
 				AA793C691EF91AA900D56624 /* MPNetworkService.swift in Sources */,
 				AA77AE6A1EFA4D45004BE076 /* MPMapDisplayProtocol.swift in Sources */,
 				AA77AE721EFA4DDA004BE076 /* MPMapDisplayPresenter.swift in Sources */,
@@ -655,7 +665,7 @@
 				AA77AE6E1EFA4DCA004BE076 /* MPMapDisplayViewController.swift in Sources */,
 				AA793C6D1EF9250200D56624 /* MPRequest.swift in Sources */,
 				AAB3D6E51EF77C3D00454C66 /* MPCategoryListProtocol.swift in Sources */,
-				AAB3D6F91EF78C0C00454C66 /* MPUtilities.swift in Sources */,
+				AA77AE851EFA7EB3004BE076 /* MPConstants.swift in Sources */,
 				AA793C501EF8CF8500D56624 /* MPPlaceListProtocol.swift in Sources */,
 				AAB3D7021EF7936800454C66 /* MPAppDependency.swift in Sources */,
 				AA793C521EF8CF9D00D56624 /* MPPlaceListViewController.swift in Sources */,
@@ -668,12 +678,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AA77AE861EFA7EB3004BE076 /* MPConstants.swift in Sources */,
 				AAB3D7051EF794E900454C66 /* MPCategoryListRouter.swift in Sources */,
 				AA77AE6F1EFA4DCA004BE076 /* MPMapDisplayViewController.swift in Sources */,
 				AAB3D6F61EF7816E00454C66 /* MPRootRouter.swift in Sources */,
 				AAB3D6C71EF77B5F00454C66 /* MyPlaceTests.swift in Sources */,
 				AAB3D6EE1EF77C9100454C66 /* MPCategoryListviewController.swift in Sources */,
-				AAB3D6FA1EF78C0C00454C66 /* MPUtilities.swift in Sources */,
 				AA793C651EF8D63200D56624 /* MPPlaceListProtocol.swift in Sources */,
 				AA77AE731EFA4DDA004BE076 /* MPMapDisplayPresenter.swift in Sources */,
 				AA793C531EF8CF9D00D56624 /* MPPlaceListViewController.swift in Sources */,
@@ -684,6 +694,7 @@
 				AA793C631EF8D59000D56624 /* MPCategoryStore.swift in Sources */,
 				AA793C571EF8CFAB00D56624 /* MPPlaceListPresenter.swift in Sources */,
 				AA77AE771EFA4DEB004BE076 /* MPMapDisplayInteractor.swift in Sources */,
+				AA77AE801EFA75D7004BE076 /* MPLocationManager.swift in Sources */,
 				AAB3D7031EF7936800454C66 /* MPAppDependency.swift in Sources */,
 				AA793C5F1EF8CFD600D56624 /* MPPlaceListRouter.swift in Sources */,
 				AAB3D6EA1EF77C8100454C66 /* MPCategoryListPresenter.swift in Sources */,
@@ -695,12 +706,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AA77AE871EFA7EB3004BE076 /* MPConstants.swift in Sources */,
 				AAB3D7061EF794EA00454C66 /* MPCategoryListRouter.swift in Sources */,
 				AA77AE701EFA4DCA004BE076 /* MPMapDisplayViewController.swift in Sources */,
 				AAB3D6F71EF7816E00454C66 /* MPRootRouter.swift in Sources */,
 				AAB3D6D21EF77B5F00454C66 /* MyPlaceUITests.swift in Sources */,
 				AAB3D6EF1EF77C9100454C66 /* MPCategoryListviewController.swift in Sources */,
-				AAB3D6FB1EF78C0C00454C66 /* MPUtilities.swift in Sources */,
 				AA793C661EF8D63300D56624 /* MPPlaceListProtocol.swift in Sources */,
 				AA77AE741EFA4DDA004BE076 /* MPMapDisplayPresenter.swift in Sources */,
 				AA793C541EF8CF9D00D56624 /* MPPlaceListViewController.swift in Sources */,
@@ -711,6 +722,7 @@
 				AA793C641EF8D59000D56624 /* MPCategoryStore.swift in Sources */,
 				AA793C581EF8CFAB00D56624 /* MPPlaceListPresenter.swift in Sources */,
 				AA77AE781EFA4DEB004BE076 /* MPMapDisplayInteractor.swift in Sources */,
+				AA77AE811EFA75D7004BE076 /* MPLocationManager.swift in Sources */,
 				AAB3D7041EF7936800454C66 /* MPAppDependency.swift in Sources */,
 				AA793C601EF8CFD600D56624 /* MPPlaceListRouter.swift in Sources */,
 				AAB3D6EB1EF77C8100454C66 /* MPCategoryListPresenter.swift in Sources */,

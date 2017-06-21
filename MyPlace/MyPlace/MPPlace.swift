@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreLocation
 
 class MPPlace {
     
@@ -28,12 +29,6 @@ class MPPlace {
         }
     }
     
-    struct MPLocation {
-        
-        var latitude : Double
-        var longitude : Double
-    }
-    
     var id : String
     var name : String
     var vicinity : String?
@@ -41,7 +36,7 @@ class MPPlace {
     var photoRef : String?
     var photo : UIImage?
     var placeState : MPPlaceState = .notApplicable
-    var location : MPLocation?
+    var location : CLLocationCoordinate2D?
     
     init(id :String, name : String) {
         self.id = id
@@ -76,7 +71,7 @@ class MPPlace {
         
         if let photosRes = jsonResponse["geometry"] as? [String : AnyObject], let lat = photosRes["location"]?["lat"] as? Double, let lng = photosRes["location"]?["lng"] as? Double{
 
-            self.location = MPLocation(latitude: lat, longitude: lng)
+            self.location = CLLocationCoordinate2D(latitude: lat, longitude: lng)
         }
     }
     

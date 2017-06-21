@@ -7,13 +7,14 @@
 //
 
 import Foundation
+import CoreLocation
 
 class MPPlaceListInteractor: PlaceListUseCase {
     weak var output: PlaceListInteractorOutput!
 
-    func fetchNearbyPlace(category : MPCategory) {
+    func fetchNearbyPlace(location : CLLocationCoordinate2D, category : MPCategory) {
         
-        MPPlaceNetworkService().fetchPlace(nearBy: 500, category: category) { (response) in
+        MPPlaceNetworkService().fetchPlace(nearBy:location , radius: kGMAPRadius, category: category) { (response) in
             
             if let places = response.context as? [MPPlace] {
                 self.output.didFetchPlaces(places: places)
