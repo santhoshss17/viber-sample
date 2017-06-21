@@ -13,9 +13,11 @@ class MPPlaceListInteractor: PlaceListUseCase {
 
     func fetchNearbyPlace(category : MPCategory) {
         
-        MPPlaceNetworkService().fetchPlace(nearBy: 500, category: category.title) { 
+        MPPlaceNetworkService().fetchPlace(nearBy: 500, category: category) { (response) in
             
-            
+            if let places = response.context as? [MPPlace] {
+                self.output.didFetchPlaces(places: places)
+            }
         }
     }
 

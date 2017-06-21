@@ -10,6 +10,7 @@
 		0577D5A2B34F9FA122FFF72A /* Pods_MyPlaceTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1B6820AA49341B8DE060837 /* Pods_MyPlaceTests.framework */; };
 		55A88CC3E0CED3065E566D72 /* Pods_MyPlaceUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCE067B115D7DBDB35D7C81A /* Pods_MyPlaceUITests.framework */; };
 		65B3B0372466E80560F936CC /* Pods_MyPlace.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FFB96CE7A9DC2EEECFAA80E7 /* Pods_MyPlace.framework */; };
+		AA77AE661EFA08B8004BE076 /* MPPlace.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA77AE651EFA08B8004BE076 /* MPPlace.swift */; };
 		AA793C501EF8CF8500D56624 /* MPPlaceListProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA793C4F1EF8CF8500D56624 /* MPPlaceListProtocol.swift */; };
 		AA793C521EF8CF9D00D56624 /* MPPlaceListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA793C511EF8CF9D00D56624 /* MPPlaceListViewController.swift */; };
 		AA793C531EF8CF9D00D56624 /* MPPlaceListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA793C511EF8CF9D00D56624 /* MPPlaceListViewController.swift */; };
@@ -90,6 +91,7 @@
 		552D5A7C9E7D674890F69FD7 /* Pods-MyPlace.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyPlace.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MyPlace/Pods-MyPlace.debug.xcconfig"; sourceTree = "<group>"; };
 		864CBD185519C16427A51734 /* Pods-MyPlaceTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyPlaceTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyPlaceTests/Pods-MyPlaceTests.release.xcconfig"; sourceTree = "<group>"; };
 		882A6E664FF58A3F760584D9 /* Pods-MyPlaceUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyPlaceUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyPlaceUITests/Pods-MyPlaceUITests.release.xcconfig"; sourceTree = "<group>"; };
+		AA77AE651EFA08B8004BE076 /* MPPlace.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MPPlace.swift; sourceTree = "<group>"; };
 		AA793C4F1EF8CF8500D56624 /* MPPlaceListProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MPPlaceListProtocol.swift; sourceTree = "<group>"; };
 		AA793C511EF8CF9D00D56624 /* MPPlaceListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MPPlaceListViewController.swift; sourceTree = "<group>"; };
 		AA793C551EF8CFAB00D56624 /* MPPlaceListPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MPPlaceListPresenter.swift; sourceTree = "<group>"; };
@@ -298,6 +300,7 @@
 			isa = PBXGroup;
 			children = (
 				AAB3D70A1EF7DF7500454C66 /* MPCategory.swift */,
+				AA77AE651EFA08B8004BE076 /* MPPlace.swift */,
 				AA793C6C1EF9250200D56624 /* MPRequest.swift */,
 				AA793C6E1EF9258D00D56624 /* MPResponse.swift */,
 			);
@@ -604,6 +607,7 @@
 			files = (
 				AAB3D70B1EF7DF7500454C66 /* MPCategory.swift in Sources */,
 				AA793C5E1EF8CFD600D56624 /* MPPlaceListRouter.swift in Sources */,
+				AA77AE661EFA08B8004BE076 /* MPPlace.swift in Sources */,
 				AA793C6B1EF91ADF00D56624 /* MPPlaceNetworkService.swift in Sources */,
 				AAB3D6FE1EF78C4100454C66 /* UIViewController+Extension.swift in Sources */,
 				AA793C621EF8D59000D56624 /* MPCategoryStore.swift in Sources */,

@@ -29,5 +29,8 @@ class MPPlaceListPresenter: PlaceListPresenter {
 
 extension MPPlaceListPresenter : PlaceListInteractorOutput {
     
-    
+    func didFetchPlaces(places : [MPPlace]) {
+        
+        print("Found Places - \(places.count)")
+    }
 }

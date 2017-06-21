@@ -30,6 +30,7 @@ protocol PlaceListUseCase: class {
 
 protocol PlaceListInteractorOutput: class {
     
+    func didFetchPlaces(places : [MPPlace])
 }
 
 protocol PlaceListWireframe: class {

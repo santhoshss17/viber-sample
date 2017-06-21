@@ -6,13 +6,14 @@
 //  Copyright © 2017 Santosh. All rights reserved.
 //
 
-import Foundation
+import UIKit
 import Alamofire
 
 class MPNetworkService {
     
     func makeRequest(request : MPRequest, completion : @escaping (_ response : MPResponse) -> Void) {
-        
+
+        UIApplication.shared.isNetworkActivityIndicatorVisible = true
         Alamofire.request(request.url, method: request.method, parameters: request.params, headers: nil).responseJSON { (response) in
             
             let responseObj = MPResponse()
@@ -23,6 +24,7 @@ class MPNetworkService {
             }
 
             completion(responseObj)
+            UIApplication.shared.isNetworkActivityIndicatorVisible = false
         }
     }
     

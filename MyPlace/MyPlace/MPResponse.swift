@@ -12,4 +12,5 @@ class MPResponse {
     
     var result : AnyObject?
     var jsonResponse : AnyObject?
+    var context : AnyObject?
 }
