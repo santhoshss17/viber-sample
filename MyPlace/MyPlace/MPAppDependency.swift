@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import GoogleMaps
 
 class MPAppDependency {
     
@@ -14,6 +15,7 @@ class MPAppDependency {
     
     init() {
         
+        GMSServices.provideAPIKey(kGMAPKey)
         self.rootRouter = MPCategoryListRouter()
     }
     

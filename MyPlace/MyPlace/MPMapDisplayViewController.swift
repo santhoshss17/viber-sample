@@ -7,10 +7,12 @@
 //
 
 import UIKit
+import GoogleMaps
 
 class MPMapDisplayViewController : UIViewController {
     
     var presenter: MapDisplayPresenter!
+    var mapView : GMSMapView?
 
     @IBOutlet weak var placeVicinity: UILabel!
     @IBOutlet weak var placeName: UILabel!
@@ -21,6 +23,25 @@ class MPMapDisplayViewController : UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        let camera = GMSCameraPosition.camera(withLatitude: 0, longitude: 0, zoom: 6.0)
+        self.mapView = GMSMapView.map(withFrame: CGRect.zero, camera: camera)
+
+        if let mapView = self.mapView {
+            
+            self.mapHolderView.addSubview(mapView)
+            
+            let views = ["newView": mapView]
+            mapView.translatesAutoresizingMaskIntoConstraints = false
+            
+            var actConstraints = [NSLayoutConstraint]()
+            let hConstraint  = NSLayoutConstraint.constraints(withVisualFormat: "H:|[newView]|", options: [], metrics: nil, views: views)
+            actConstraints += hConstraint
+            let vConstraint  = NSLayoutConstraint.constraints(withVisualFormat: "V:|[newView]|", options: [], metrics: nil, views: views)
+            actConstraints += vConstraint
+            
+            self.mapHolderView.addConstraints(actConstraints)
+        }
+        
         self.presenter.viewReadyToConfigure()
     }
     
@@ -30,6 +51,17 @@ extension MPMapDisplayViewController : MapDisplayView {
     
     func updateUI(for place : MPPlace) {
         
+        if let lat = place.location?.latitude, let lng = place.location?.latitude {
+            let camera = GMSCameraPosition.camera(withLatitude: lat, longitude: lng, zoom: 6.0)
+            self.mapView?.camera = camera
+            
+            let marker = GMSMarker()
+            marker.position = CLLocationCoordinate2D(latitude: lat, longitude: lng)
+            marker.title = place.name
+            marker.snippet = place.vicinity
+            marker.map = mapView
+        }
+
         self.title = place.name
         self.placeName.text = place.name
         self.placeVicinity.text = place.vicinity

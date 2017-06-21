@@ -14,5 +14,6 @@ enum MPSortCategory {
 }
 
 let kGAPIKey = "AIzaSyBRXKxz7WL2-5iXecdh8-O9g3qO9JR1ohM"
+let kGMAPKey = "AIzaSyCVjeu5iooX5yUF4_T43mIiYPAI66gm8J0"
 let kGAPIPlace = "https://maps.googleapis.com/maps/api/place/nearbysearch/json"
 
