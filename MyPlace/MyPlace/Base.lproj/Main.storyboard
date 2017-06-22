@@ -248,7 +248,7 @@
                                             <constraint firstAttribute="width" constant="2" id="R7R-Ie-gBe"/>
                                         </constraints>
                                     </view>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="42 KM" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZCH-gu-lhG">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="42 KM" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="12" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZCH-gu-lhG">
                                         <rect key="frame" x="244" y="30" width="91" height="47"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="91" id="FTt-9G-TxT"/>

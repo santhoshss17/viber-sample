@@ -74,6 +74,11 @@ extension MPMapDisplayViewController : MapDisplayView {
             self.placeState.text = placeState.rawValue
             self.placeState.backgroundColor = placeState.bgColor()
         }
+        
+        if let placeLocation = place.location {
+            let distance = round(MPLocationManager.shared.distanceFromCurrentLocation(to: placeLocation)/1000)
+            self.distance.text = "\(distance) KM"
+        }
     }
 
 }

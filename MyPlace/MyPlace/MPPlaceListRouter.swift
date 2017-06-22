@@ -35,9 +35,9 @@ class MPPlaceListRouter : PlaceListWireframe {
         return router.viewController!
     }
 
-    func displayMap(for place:MPPlace) {
+    func displayMap(for context:Int, mapDatasource : MPMapDisplayPresenterDatasource) {
         
-        let mapDisplayViewController = MPMapDisplayRouter.buildMapDisplayModule(place: place)
+        let mapDisplayViewController = MPMapDisplayRouter.buildMapDisplayModule(context: context, mapDatasource: mapDatasource)
         self.viewController?.navigationController?.pushViewController(mapDisplayViewController, animated: true)
     }
 }

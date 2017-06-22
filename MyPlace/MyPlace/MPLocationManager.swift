@@ -34,6 +34,20 @@ class MPLocationManager : NSObject, CLLocationManagerDelegate{
         return CLLocationManager.locationServicesEnabled()
     }
     
+    func distanceFromCurrentLocation(to location:CLLocationCoordinate2D) -> Double {
+        
+        var distanceInMeters :Double = 0
+        
+        if let lat = self.currentLocation?.latitude, let lng = self.currentLocation?.latitude {
+            let currentCoordinate = CLLocation(latitude: lat, longitude: lng)
+            let coordinate = CLLocation(latitude: location.latitude, longitude: location.longitude)
+            
+            distanceInMeters = currentCoordinate.distance(from: coordinate)
+        }
+        
+        return distanceInMeters
+    }
+    
     private func requestLocationUpdates() {
 
         self.locationManager.requestWhenInUseAuthorization()

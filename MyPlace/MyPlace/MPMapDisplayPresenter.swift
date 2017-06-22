@@ -8,20 +8,31 @@
 
 import Foundation
 
+protocol MPMapDisplayPresenterDatasource {
+    
+    func place(at context : Int) -> MPPlace?
+}
+
 class MPMapDisplayPresenter : MapDisplayPresenter {
     
     weak var view: MapDisplayView!
     var interactor: MapDisplayUseCase?
     var router: MapDisplayWireframe!
-    var place : MPPlace
+    private var place : MPPlace?
+    var context : Int
+    var datasource : MPMapDisplayPresenterDatasource
     
-    init(place : MPPlace) {
-        self.place = place
+    init(context : Int, datasource : MPMapDisplayPresenterDatasource) {
+        self.context = context
+        self.datasource = datasource
     }
     
     func viewReadyToConfigure() {
         
-        self.view.updateUI(for : self.place)
+        if let place = self.datasource.place(at: self.context) {
+            self.place = place
+            self.view.updateUI(for : place)
+        }
     }
 }
 

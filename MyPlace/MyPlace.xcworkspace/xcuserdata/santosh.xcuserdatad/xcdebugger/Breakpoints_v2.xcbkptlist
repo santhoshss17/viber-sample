@@ -9,78 +9,14 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "MyPlace/MPPlaceNetworkService.swift"
-            timestampString = "519799959.284756"
+            filePath = "MyPlace/MPMapDisplayViewController.swift"
+            timestampString = "519810839.770343"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "29"
-            endingLineNumber = "29"
-            landmarkName = "fetchPlace(nearBy:radius:category:completion:)"
+            startingLineNumber = "79"
+            endingLineNumber = "79"
+            landmarkName = "updateUI(for:)"
             landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "MyPlace/MPPlaceNetworkService.swift"
-            timestampString = "519799979.478403"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "22"
-            endingLineNumber = "22"
-            landmarkName = "fetchPlace(nearBy:radius:category:completion:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "MyPlace/MPCategoryListPresenter.swift"
-            timestampString = "519800000.816795"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "21"
-            endingLineNumber = "21"
-            landmarkName = "viewReadyToConfigure()"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "MyPlace.MPCategoryListPresenter.viewReadyToConfigure () -&gt; ()"
-                  moduleName = "MyPlace"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/santosh/Documents/My/MyPlace/MyPlace/MyPlace/MPCategoryListPresenter.swift"
-                  timestampString = "519800433.079208"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "21"
-                  endingLineNumber = "21"
-                  offsetFromSymbolStart = "220">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "MyPlace.MPCategoryListPresenter.(viewReadyToConfigure () -&gt; ()).(closure #1)"
-                  moduleName = "MyPlace"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/santosh/Documents/My/MyPlace/MyPlace/MyPlace/MPCategoryListPresenter.swift"
-                  timestampString = "519800433.080458"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "23"
-                  endingLineNumber = "23"
-                  offsetFromSymbolStart = "16">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

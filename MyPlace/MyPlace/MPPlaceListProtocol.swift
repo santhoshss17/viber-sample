@@ -41,5 +41,5 @@ protocol PlaceListInteractorOutput: class {
 protocol PlaceListWireframe: class {
     weak var viewController: UIViewController? { get set }
     
-    func displayMap(for place:MPPlace)
+    func displayMap(for context:Int, mapDatasource : MPMapDisplayPresenterDatasource)
 }

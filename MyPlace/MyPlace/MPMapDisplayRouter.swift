@@ -12,11 +12,11 @@ class MPMapDisplayRouter : MapDisplayWireframe {
 
     weak var viewController: UIViewController?
 
-    class func buildMapDisplayModule(place : MPPlace) -> UIViewController {
+    class func buildMapDisplayModule(context :Int, mapDatasource : MPMapDisplayPresenterDatasource) -> UIViewController {
         
         let router = MPMapDisplayRouter()
         let interactor = MPMapDisplayInteractor()
-        let presenter = MPMapDisplayPresenter(place: place)
+        let presenter = MPMapDisplayPresenter(context:context, datasource: mapDatasource)
         
         if let MapDisplayVC = UIViewController.viewController(storyboard : "MPMapDisplayViewController") as? MPMapDisplayViewController {
             

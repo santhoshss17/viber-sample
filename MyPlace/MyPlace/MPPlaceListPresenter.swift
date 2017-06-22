@@ -43,7 +43,18 @@ class MPPlaceListPresenter: PlaceListPresenter {
     
     func didSelectPlace(place : MPPlace) {
         
-        self.router.displayMap(for : place)
+        if let index = self.index(place: place) {
+            self.router.displayMap(for : index, mapDatasource: self)
+        }
+    }
+    
+    func index(place : MPPlace) -> Int? {
+        
+        let index = self.places.index { (aPlace) -> Bool in
+            return aPlace == place
+        }
+
+        return index
     }
     
     func fetchPlaces() {
@@ -67,5 +78,18 @@ extension MPPlaceListPresenter : PlaceListInteractorOutput {
         self.places.append(contentsOf: places)
         self.view.reloadPlaces()
         print("Found Places - \(places.count)")
+    }
+}
+
+extension MPPlaceListPresenter : MPMapDisplayPresenterDatasource {
+    
+    func place(at context : Int) -> MPPlace? {
+        
+        if context < self.places.count && context >= 0 {
+
+            return self.places[context]
+        }
+        
+        return nil
     }
 }

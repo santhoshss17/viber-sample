@@ -9,7 +9,7 @@
 import UIKit
 import CoreLocation
 
-class MPPlace {
+class MPPlace: Equatable {
     
     enum MPPlaceState : String {
         case open = "Open"
@@ -88,4 +88,9 @@ class MPPlace {
         
         return typesDescription
     }
+}
+
+func ==(lhs: MPPlace, rhs: MPPlace) -> Bool {
+    
+    return lhs.id == rhs.id
 }
