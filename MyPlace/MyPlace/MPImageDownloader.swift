@@ -43,6 +43,9 @@ class MPImageDownloader {
                     completion()
                 })
             }
+            
+            self.sessionTask?.resume()
+            
         } else {
             
             completion()

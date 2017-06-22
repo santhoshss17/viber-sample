@@ -27,7 +27,9 @@ class MPPlaceListViewController : UIViewController  {
         for indexPath in visibleCells {
             
             let place = self.presenter.places[indexPath.row]
-            self.imageDownloaded(context: indexPath, place: place)
+            if place.photo == nil {
+                self.presenter.needsImageForCell(context: indexPath, place: place)
+            }
         }
     }
 }
