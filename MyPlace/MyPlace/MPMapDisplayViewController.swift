@@ -23,9 +23,36 @@ class MPMapDisplayViewController : UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.configMapView()
+        self.addGestureToMapHolder()
+        self.presenter.viewReadyToConfigure()
+    }
+    
+    @IBAction func leftNavMapTapped(_ sender: Any) {
+        
+        self.presenter.userNeedPreviousMap()
+    }
+    
+    func leftGesture() {
+        
+        self.presenter.userNeedPreviousMap()
+    }
+    
+    @IBAction func rightNavMapTapped(_ sender: Any) {
+        
+        self.presenter.userNeedNextMap()
+    }
+    
+    func rightGesture() {
+        
+        self.presenter.userNeedPreviousMap()
+    }
+    
+    func configMapView() {
+        
         let camera = GMSCameraPosition.camera(withLatitude: 0, longitude: 0, zoom: 6.0)
         self.mapView = GMSMapView.map(withFrame: CGRect.zero, camera: camera)
-
+        
         if let mapView = self.mapView {
             
             self.mapHolderView.addSubview(mapView)
@@ -41,20 +68,18 @@ class MPMapDisplayViewController : UIViewController {
             
             self.mapHolderView.addConstraints(actConstraints)
         }
-        
-        self.presenter.viewReadyToConfigure()
     }
     
-    @IBAction func leftNavMapTapped(_ sender: Any) {
+    func addGestureToMapHolder() {
         
-        self.presenter.userNeedPreviousMap()
+        let leftGesture = UISwipeGestureRecognizer(target: self, action: #selector(self.leftGesture))
+        leftGesture.direction = .left
+        self.mapHolderView.addGestureRecognizer(leftGesture)
+
+        let rightGesture = UISwipeGestureRecognizer(target: self, action: #selector(self.rightGesture))
+        rightGesture.direction = .right
+        self.mapHolderView.addGestureRecognizer(rightGesture)
     }
-    
-    @IBAction func rightNavMapTapped(_ sender: Any) {
-        
-        self.presenter.userNeedNextMap()
-    }
-    
 }
 
 extension MPMapDisplayViewController : MapDisplayView {
