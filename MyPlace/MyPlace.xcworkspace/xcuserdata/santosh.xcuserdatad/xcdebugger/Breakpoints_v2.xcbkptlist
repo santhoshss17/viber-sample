@@ -2,4 +2,118 @@
 <Bucket
    type = "0"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MyPlace/MPImageDownloader.swift"
+            timestampString = "519841738.553172"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "38"
+            endingLineNumber = "38"
+            landmarkName = "startDownload(completion:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MyPlace.MPImageDownloader.(startDownload (completion : () -&gt; ()) -&gt; ()).(closure #1).(closure #1)"
+                  moduleName = "MyPlace"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Volumes/External/Projects/MyPlace/MyPlace/MyPlace/MPImageDownloader.swift"
+                  timestampString = "519841738.559199"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "38"
+                  endingLineNumber = "38"
+                  offsetFromSymbolStart = "27">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MyPlace.MPImageDownloader.(startDownload (completion : () -&gt; ()) -&gt; ()).(closure #1).(closure #1)"
+                  moduleName = "MyPlace"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Volumes/External/Projects/MyPlace/MyPlace/MyPlace/MPImageDownloader.swift"
+                  timestampString = "519841738.562417"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "38"
+                  endingLineNumber = "38"
+                  offsetFromSymbolStart = "68">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MyPlace/MPImageDownloader.swift"
+            timestampString = "519841872.555742"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "36"
+            endingLineNumber = "36"
+            landmarkName = "startDownload(completion:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MyPlace.MPImageDownloader.(startDownload (completion : () -&gt; ()) -&gt; ()).(closure #1)"
+                  moduleName = "MyPlace"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Volumes/External/Projects/MyPlace/MyPlace/MyPlace/MPImageDownloader.swift"
+                  timestampString = "519841872.665452"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "36"
+                  endingLineNumber = "36"
+                  offsetFromSymbolStart = "35">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MyPlace.MPImageDownloader.(startDownload (completion : () -&gt; ()) -&gt; ()).(closure #1).(closure #1)"
+                  moduleName = "MyPlace"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Volumes/External/Projects/MyPlace/MyPlace/MyPlace/MPImageDownloader.swift"
+                  timestampString = "519841872.667943"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "38"
+                  endingLineNumber = "38"
+                  offsetFromSymbolStart = "27">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MyPlace/MPImageDownloader.swift"
+            timestampString = "519841893.46908"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "33"
+            endingLineNumber = "33"
+            landmarkName = "startDownload(completion:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>

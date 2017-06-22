@@ -19,6 +19,17 @@ class MPPlaceListViewController : UIViewController  {
         
         self.presenter.viewReadyToConfigure()
     }
+    
+    func loadOnScreenImages() {
+        
+        let visibleCells = self.collectionView.indexPathsForVisibleItems
+        
+        for indexPath in visibleCells {
+            
+            let place = self.presenter.places[indexPath.row]
+            self.imageDownloaded(context: indexPath, place: place)
+        }
+    }
 }
 
 extension MPPlaceListViewController : PlaceListView {
@@ -43,6 +54,14 @@ extension MPPlaceListViewController : PlaceListView {
             
         })
     }
+    
+    func imageDownloaded(context : IndexPath, place : MPPlace) {
+        
+        if let cell = self.collectionView.cellForItem(at: context) as? MPPlaceCollectionViewCell {
+            cell.placeImage.image = place.photo
+        }
+    }
+
 }
 
 extension MPPlaceListViewController : UICollectionViewDelegate, UICollectionViewDataSource {
@@ -56,7 +75,13 @@ extension MPPlaceListViewController : UICollectionViewDelegate, UICollectionView
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "MPPlaceCollectionViewCell", for: indexPath) as! MPPlaceCollectionViewCell
         
-        cell.place = self.presenter.places[indexPath.row]
+        let place = self.presenter.places[indexPath.row]
+        cell.place = place
+        
+        if collectionView.isDragging == false && collectionView.isDecelerating == false {
+            
+            self.presenter.needsImageForCell(context : indexPath, place : place)
+        }
         
         return cell
     }
@@ -68,8 +93,15 @@ extension MPPlaceListViewController : UICollectionViewDelegate, UICollectionView
     }
     
     func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
-        
-//        let visibleCells = self.collectionView.visibleCells
+
+        self.loadOnScreenImages()
+    }
+    
+    func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
+        if !decelerate {
+            
+            self.loadOnScreenImages()
+        }
     }
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
@@ -80,12 +112,4 @@ extension MPPlaceListViewController : UICollectionViewDelegate, UICollectionView
             self.presenter.didReachedEndOfContent()
         }
     }
-    
-//    - (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView {
-//    
-//    for (UICollectionViewCell *cell in [self.collectionView visibleCells]) {
-//        NSIndexPath *indexPath = [self.collectionView indexPathForCell:cell];
-//        NSUInteger lastIndex = [indexPath indexAtPosition:[indexPath length] - 1];
-//        }
-//    }
 }

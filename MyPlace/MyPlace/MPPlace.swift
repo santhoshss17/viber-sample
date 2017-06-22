@@ -8,8 +8,9 @@
 
 import UIKit
 import CoreLocation
+import Alamofire
 
-class MPPlace: Equatable {
+class MPPlace: Equatable, MPImageDownloaderDatasource {
     
     enum MPPlaceState : String {
         case open = "Open"
@@ -87,6 +88,29 @@ class MPPlace: Equatable {
         }
         
         return typesDescription
+    }
+    
+    //MARK:- MPImageDownloaderDatasource Methods
+    
+    func imageUrl() -> URL? {
+     
+        if let photoRef = self.photoRef {
+            
+            var params = [String:String]()
+            params["photoreference"] = photoRef
+            params["maxwidth"] = "200"
+            params["key"] = kGAPIKey
+            let request = Alamofire.request(kGAPIPhoto, method: .get, parameters: params, encoding: URLEncoding.default)
+            
+            return request.request?.url
+        }
+        
+        return nil
+    }
+    
+    func setImage(image : UIImage) {
+        
+        self.photo = image
     }
 }
 

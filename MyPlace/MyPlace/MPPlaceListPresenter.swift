@@ -77,6 +77,11 @@ class MPPlaceListPresenter: PlaceListPresenter {
         
         self.fetchPlaces()
     }
+    
+    func needsImageForCell(context : IndexPath, place : MPPlace) {
+        
+        self.interactor?.downloadImage(context : context, place : place)
+    }
 }
 
 extension MPPlaceListPresenter : PlaceListInteractorOutput {
@@ -89,6 +94,12 @@ extension MPPlaceListPresenter : PlaceListInteractorOutput {
         
         print("Found Places - \(places.count)")
     }
+    
+    func imageDownloaded(context : IndexPath, place : MPPlace) {
+        
+        self.view.imageDownloaded(context: context, place: place)
+    }
+
 }
 
 extension MPPlaceListPresenter : MPMapDisplayPresenterDatasource {

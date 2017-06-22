@@ -15,6 +15,7 @@ protocol PlaceListView : class {
     func setTitle(title : String)
     func reloadPlaces()
     func displayAlert(message : String, primaryButtonTitle : String)
+    func imageDownloaded(context : IndexPath, place : MPPlace)
 }
 
 protocol PlaceListPresenter: class {
@@ -26,17 +27,20 @@ protocol PlaceListPresenter: class {
     func viewReadyToConfigure()
     func didSelectPlace(place : MPPlace)
     func didReachedEndOfContent()
+    func needsImageForCell(context : IndexPath, place : MPPlace)
 }
 
 protocol PlaceListUseCase: class {
     weak var output: PlaceListInteractorOutput! { get set }
     
     func fetchNearbyPlace(location : CLLocationCoordinate2D, category : MPCategory, morePlacesToken : String?)
+    func downloadImage(context : IndexPath, place : MPPlace)
 }
 
 protocol PlaceListInteractorOutput: class {
     
     func didFetchPlaces(places : [MPPlace], morePlacesToken:String?)
+    func imageDownloaded(context : IndexPath, place : MPPlace)
 }
 
 protocol PlaceListWireframe: class {
