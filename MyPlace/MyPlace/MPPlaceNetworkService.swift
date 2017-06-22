@@ -10,7 +10,7 @@ import Foundation
 import CoreLocation
 
 class MPPlaceNetworkService : MPNetworkService {
-    //"https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=-33.8670522,151.1957362&radius=500&type=restaurant&keyword=cruise&key=
+
     func fetchPlace(nearBy location : CLLocationCoordinate2D, radius:String, category : MPCategory, completion : @escaping (_ response : MPResponse)->Void) {
         
         if let url = URL(string: kGAPIPlace) {
@@ -19,7 +19,7 @@ class MPPlaceNetworkService : MPNetworkService {
             var params : [String:AnyObject] = [:]
             params["location"] =  "\(location.latitude),\(location.longitude)" as AnyObject //"-33.8670522,151.195736"
             params["radius"] = radius as AnyObject
-            params["type"] = category.title as AnyObject
+            params["type"] = category.type as AnyObject
             params["key"] = kGAPIKey as AnyObject
             request.params = params
             self.makeRequest(request: request, completion: { (response) in

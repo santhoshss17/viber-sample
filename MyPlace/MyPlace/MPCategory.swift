@@ -13,11 +13,13 @@ class MPCategory : NSObject, NSCoding {
     var title : String
     var image : UIImage?
     var rank : Int = 0
+    var type : String?
     
-    init(title : String, image : UIImage?, rank : Int = 0) {
+    init(title : String, image : UIImage?, rank : Int = 0, type : String?) {
         self.title = title
         self.image = image
         self.rank = rank
+        self.type = type
     }
     
     required convenience init?(coder aDecoder: NSCoder) {
@@ -29,14 +31,16 @@ class MPCategory : NSObject, NSCoding {
         }
         let image = aDecoder.decodeObject(forKey: "image") as? UIImage
         let rank = aDecoder.decodeObject(forKey: "rank") as? Int ?? 0
+        let type = aDecoder.decodeObject(forKey: "type") as? String
     
-        self.init(title: title, image: image, rank: rank)
+        self.init(title: title, image: image, rank: rank, type: type)
     }
     
     func encode(with aCoder: NSCoder) {
         aCoder.encode(title, forKey: "title")
         aCoder.encode(image, forKey: "image")
         aCoder.encode(rank, forKey:"rank")
+        aCoder.encode(type, forKey:"type")
     }
     
     func incrementRank() {

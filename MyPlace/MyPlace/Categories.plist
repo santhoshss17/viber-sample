@@ -7,66 +7,88 @@
 		<string>Bakery</string>
 		<key>image</key>
 		<string>Bakery.png</string>
+		<key>type</key>
+		<string>bakery</string>
 	</dict>
 	<dict>
 		<key>title</key>
 		<string>Doctor</string>
 		<key>image</key>
 		<string>Doctor.png</string>
+		<key>type</key>
+		<string>doctor</string>
 	</dict>
 	<dict>
 		<key>title</key>
 		<string>School</string>
 		<key>image</key>
 		<string>School.png</string>
+		<key>type</key>
+		<string>school</string>
 	</dict>
 	<dict>
 		<key>title</key>
-		<string>Taxi_stand</string>
+		<string>Taxi stand</string>
 		<key>image</key>
 		<string>Taxi.png</string>
+		<key>type</key>
+		<string>taxi_stand</string>
 	</dict>
 	<dict>
 		<key>title</key>
-		<string>Hair_care</string>
+		<string>Hair Care</string>
 		<key>image</key>
 		<string>Hair.png</string>
+		<key>type</key>
+		<string>hair_care</string>
 	</dict>
 	<dict>
 		<key>title</key>
 		<string>Restaurant</string>
 		<key>image</key>
 		<string>Restaurant.png</string>
+		<key>type</key>
+		<string>restaurant</string>
 	</dict>
 	<dict>
 		<key>title</key>
 		<string>Pharmacy</string>
 		<key>image</key>
 		<string>Pharmacy.png</string>
+		<key>type</key>
+		<string>pharmacy</string>
 	</dict>
 	<dict>
 		<key>title</key>
 		<string>Atm</string>
 		<key>image</key>
 		<string>ATM.png</string>
+		<key>type</key>
+		<string>atm</string>
 	</dict>
 	<dict>
 		<key>title</key>
 		<string>Gym</string>
 		<key>image</key>
 		<string>Gym.png</string>
+		<key>type</key>
+		<string>gym</string>
 	</dict>
 	<dict>
 		<key>title</key>
 		<string>Store</string>
 		<key>image</key>
 		<string>Store.png</string>
+		<key>type</key>
+		<string>store</string>
 	</dict>
 	<dict>
 		<key>title</key>
 		<string>Spa</string>
 		<key>image</key>
 		<string>Spa.png</string>
+		<key>type</key>
+		<string>spa</string>
 	</dict>
 </array>
 </plist>

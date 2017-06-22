@@ -34,7 +34,7 @@ class MPCategoryStore {
                     var catConvertedArr : [MPCategory] = [MPCategory]()
                     for category in catPlistArr {
                         if let title = category["title"], let image = category["image"] {
-                            catConvertedArr.append(MPCategory(title:title, image: UIImage(named : image)))
+                            catConvertedArr.append(MPCategory(title:title, image: UIImage(named : image), type : category["type"]))
                         }
                     }
                     

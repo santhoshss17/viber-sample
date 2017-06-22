@@ -61,17 +61,20 @@ extension MPMapDisplayViewController : MapDisplayView {
     
     func updateUI(for place : MPPlace) {
         
-        if let lat = place.location?.latitude, let lng = place.location?.latitude {
-            let camera = GMSCameraPosition.camera(withLatitude: lat, longitude: lng, zoom: 6.0)
+        self.mapView?.clear()
+
+        if let lat = place.location?.latitude, let lng = place.location?.longitude {
+            let camera = GMSCameraPosition.camera(withLatitude: lat, longitude: lng, zoom: 12.0)
             self.mapView?.camera = camera
             
-            let marker = GMSMarker()
-            marker.position = CLLocationCoordinate2D(latitude: lat, longitude: lng)
-            marker.title = place.name
-            marker.snippet = place.vicinity
-            marker.map = mapView
+            self.addMapMarker(title: place.name, snippet: place.vicinity, location: place.location!, markerColor: UIColor.red, animation: .pop)
         }
-
+        
+        if let currentLocation = MPLocationManager.shared.currentLocation {
+            
+            self.addMapMarker(title: "You are here", location: currentLocation, markerColor: UIColor.blue)
+        }
+        
         self.title = place.name
         self.placeName.text = place.name
         self.placeVicinity.text = place.vicinity
@@ -89,6 +92,17 @@ extension MPMapDisplayViewController : MapDisplayView {
             let distance = round(MPLocationManager.shared.distanceFromCurrentLocation(to: placeLocation)/1000)
             self.distance.text = "\(distance) KM"
         }
+    }
+    
+    func addMapMarker(title : String, snippet : String? = nil, location : CLLocationCoordinate2D, markerColor color : UIColor?, animation : GMSMarkerAnimation = .none) {
+        
+        let marker = GMSMarker()
+        marker.icon = GMSMarker.markerImage(with: color)
+        marker.position = location
+        marker.title = title
+        marker.snippet = snippet
+        marker.appearAnimation = animation
+        marker.map = mapView
     }
     
     func displayAlert(message : String, primaryButtonTitle : String) {
