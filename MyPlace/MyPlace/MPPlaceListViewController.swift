@@ -80,7 +80,7 @@ extension MPPlaceListViewController : UICollectionViewDelegate, UICollectionView
         let place = self.presenter.places[indexPath.row]
         cell.place = place
         
-        if collectionView.isDragging == false && collectionView.isDecelerating == false {
+        if collectionView.isDragging == false && collectionView.isDecelerating == false && nil == place.photo {
             
             self.presenter.needsImageForCell(context : indexPath, place : place)
         }
