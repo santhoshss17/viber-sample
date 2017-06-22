@@ -13,8 +13,10 @@ class MPPlaceListPresenter: PlaceListPresenter {
     weak var view: PlaceListView!
     var interactor: PlaceListUseCase?
     var router: PlaceListWireframe!
-    var category : MPCategory
+    fileprivate var category : MPCategory
+    
     var places : [MPPlace] = [MPPlace]()
+    fileprivate var morePlacesToken : String?
     
     init(category : MPCategory) {
         
@@ -60,7 +62,8 @@ class MPPlaceListPresenter: PlaceListPresenter {
     func fetchPlaces() {
         
         if let location = MPLocationManager.shared.currentLocation {
-            self.interactor?.fetchNearbyPlace(location: location, category : category)
+            
+            self.interactor?.fetchNearbyPlace(location: location, category : category, morePlacesToken: self.morePlacesToken)
         }
     }
     
@@ -69,14 +72,21 @@ class MPPlaceListPresenter: PlaceListPresenter {
         NotificationCenter.default.removeObserver(self)
         self.fetchPlaces()
     }
+    
+    func didReachedEndOfContent() {
+        
+        self.fetchPlaces()
+    }
 }
 
 extension MPPlaceListPresenter : PlaceListInteractorOutput {
     
-    func didFetchPlaces(places : [MPPlace]) {
-        
+    func didFetchPlaces(places : [MPPlace], morePlacesToken:String?){
+    
+        self.morePlacesToken = morePlacesToken
         self.places.append(contentsOf: places)
         self.view.reloadPlaces()
+        
         print("Found Places - \(places.count)")
     }
 }

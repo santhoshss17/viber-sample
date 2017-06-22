@@ -11,15 +11,21 @@ import CoreLocation
 
 class MPPlaceNetworkService : MPNetworkService {
 
-    func fetchPlace(nearBy location : CLLocationCoordinate2D, radius:String, category : MPCategory, completion : @escaping (_ response : MPResponse)->Void) {
+    func fetchPlace(nearBy location : CLLocationCoordinate2D, radius:String, category : MPCategory,morePlacesToken : String?, completion : @escaping (_ response : MPResponse)->Void) {
         
         if let url = URL(string: kGAPIPlace) {
             
             let request = MPRequest(url: url)
             var params : [String:AnyObject] = [:]
-            params["location"] =  "\(location.latitude),\(location.longitude)" as AnyObject //"-33.8670522,151.195736"
-            params["radius"] = radius as AnyObject
-            params["type"] = category.type as AnyObject
+            
+            if(morePlacesToken == nil) {
+                params["location"] =  "\(location.latitude),\(location.longitude)" as AnyObject //"-33.8670522,151.195736"
+                params["radius"] = radius as AnyObject
+                params["type"] = category.type as AnyObject
+            } else {
+                
+                params["pagetoken"] = morePlacesToken as AnyObject
+            }
             params["key"] = kGAPIKey as AnyObject
             request.params = params
             self.makeRequest(request: request, completion: { (response) in
@@ -33,7 +39,15 @@ class MPPlaceNetworkService : MPNetworkService {
                         }
                     }
                     
-                    response.context = places as AnyObject
+                    var contextDict : [String:AnyObject?] = [:]
+                    contextDict["Places"] = places as AnyObject
+                    
+                    if let nextToken = responseJson["next_page_token"] {
+                        
+                        contextDict["MorePlacesToken"] = nextToken as AnyObject
+                    }
+                    
+                    response.context = contextDict as AnyObject
                 }
                 
                 completion(response)

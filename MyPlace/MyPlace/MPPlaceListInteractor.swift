@@ -12,14 +12,18 @@ import CoreLocation
 class MPPlaceListInteractor: PlaceListUseCase {
     weak var output: PlaceListInteractorOutput!
 
-    func fetchNearbyPlace(location : CLLocationCoordinate2D, category : MPCategory) {
-        
-        MPPlaceNetworkService().fetchPlace(nearBy:location , radius: kGMAPRadius, category: category) { (response) in
+    func fetchNearbyPlace(location : CLLocationCoordinate2D, category : MPCategory, morePlacesToken : String? = nil) {
+        MPPlaceNetworkService().fetchPlace(nearBy:location , radius: kGMAPRadius, category: category, morePlacesToken : morePlacesToken) { (response) in
             
-            if let places = response.context as? [MPPlace] {
-                self.output.didFetchPlaces(places: places)
+            if let places = response.context?["Places"] as? [MPPlace] {
+                self.output.didFetchPlaces(places: places, morePlacesToken:response.context?["MorePlacesToken"] as?String)
             }
         }
+    }
+    
+    func fetchPlace(token : String) {
+        
+        
     }
 
 }

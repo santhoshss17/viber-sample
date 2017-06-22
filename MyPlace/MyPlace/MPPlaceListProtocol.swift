@@ -25,17 +25,18 @@ protocol PlaceListPresenter: class {
     
     func viewReadyToConfigure()
     func didSelectPlace(place : MPPlace)
+    func didReachedEndOfContent()
 }
 
 protocol PlaceListUseCase: class {
     weak var output: PlaceListInteractorOutput! { get set }
     
-    func fetchNearbyPlace(location : CLLocationCoordinate2D, category : MPCategory)
+    func fetchNearbyPlace(location : CLLocationCoordinate2D, category : MPCategory, morePlacesToken : String?)
 }
 
 protocol PlaceListInteractorOutput: class {
     
-    func didFetchPlaces(places : [MPPlace])
+    func didFetchPlaces(places : [MPPlace], morePlacesToken:String?)
 }
 
 protocol PlaceListWireframe: class {

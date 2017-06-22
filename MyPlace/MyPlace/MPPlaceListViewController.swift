@@ -66,4 +66,26 @@ extension MPPlaceListViewController : UICollectionViewDelegate, UICollectionView
         let place = self.presenter.places[indexPath.row]
         self.presenter.didSelectPlace(place: place)
     }
+    
+    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+        
+//        let visibleCells = self.collectionView.visibleCells
+    }
+    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        
+        let height : CGFloat = scrollView.contentSize.height-scrollView.frame.size.height
+        if (scrollView.contentOffset.y == CGFloat(roundf(Float(height)))) {
+            
+            self.presenter.didReachedEndOfContent()
+        }
+    }
+    
+//    - (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView {
+//    
+//    for (UICollectionViewCell *cell in [self.collectionView visibleCells]) {
+//        NSIndexPath *indexPath = [self.collectionView indexPathForCell:cell];
+//        NSUInteger lastIndex = [indexPath indexAtPosition:[indexPath length] - 1];
+//        }
+//    }
 }
