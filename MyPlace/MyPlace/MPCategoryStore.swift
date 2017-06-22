@@ -16,9 +16,14 @@ class MPCategoryStore {
         return UserDefaults.standard
     }
     
+    init() {
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(didEnterBackground), name: NSNotification.Name.UIApplicationDidEnterBackground, object: nil)
+    }
+    
     func fetchCategories(completion : ([MPCategory])->Void){
 
-        if let decodedCategories = self.store.object(forKey: "Categories") as? Data, let catConvertedArr = NSKeyedUnarchiver.unarchiveObject(with: decodedCategories) as? [MPCategory]{
+        if let decodedCategories = self.store.data(forKey: "Categories"), let catConvertedArr = NSKeyedUnarchiver.unarchiveObject(with: decodedCategories) as? [MPCategory]{
             
             completion(catConvertedArr)
 
@@ -33,18 +38,40 @@ class MPCategoryStore {
                         }
                     }
                     
-                    let encodedData: Data = NSKeyedArchiver.archivedData(withRootObject: catConvertedArr)
-                    self.store.set(encodedData, forKey: "Categories")
-                    
+                    self.updateStore(categories: catConvertedArr)
                     completion(catConvertedArr)
                 }
             }
         }
     }
     
-    func updateCategories(category : [MPCategory], completion : ()->Void){
+    func updateStore(category : MPCategory){
         
+        self.fetchCategories { (categories) in
+            
+            _ = categories.map({ (storeCategory) -> MPCategory in
+                
+                if storeCategory == category {
+                    storeCategory.rank = category.rank
+                }
+                
+                return storeCategory
+            })
+            
+            self.updateStore(categories: categories)
+        }
+    }
+    
+    private func updateStore(categories : [MPCategory]) {
+    
+        let encodedData: Data = NSKeyedArchiver.archivedData(withRootObject: categories)
+        self.store.set(encodedData, forKey: "Categories")
+        self.store.synchronize()
+    }
+    
+    @objc func didEnterBackground() {
         
+        self.store.synchronize()
     }
 }
 

@@ -14,6 +14,7 @@ protocol PlaceListView : class {
     
     func setTitle(title : String)
     func reloadPlaces()
+    func displayAlert(message : String, primaryButtonTitle : String)
 }
 
 protocol PlaceListPresenter: class {

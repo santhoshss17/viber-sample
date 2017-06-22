@@ -33,7 +33,7 @@ class MPCategoryListPresenter : CategoryListPresenter {
     
     private func updateRank(category : MPCategory) {
         
-        category.incrementRank()
+        self.interactor?.updateRank(category: category)
         self.view.reloadCategories(sort: .rank)
     }
 }

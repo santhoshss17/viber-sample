@@ -25,6 +25,12 @@ class MPPlaceListPresenter: PlaceListPresenter {
         
         self.view.setTitle(title: "Neaby - \(self.category.title)")
         
+        guard MPLocationManager.shared.locationServicesEnabled() == true else {
+            
+            self.view.displayAlert(message: "Location service is not enabled. Please enable from settings", primaryButtonTitle: "Ok")
+            return
+        }
+        
         if MPLocationManager.shared.currentLocation != nil {
             
             self.fetchPlaces()

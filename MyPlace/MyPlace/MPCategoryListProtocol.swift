@@ -29,6 +29,7 @@ protocol CategoryListUseCase: class {
     weak var output: CategoryListInteractorOutput! { get set }
     
     func fetchCategories(completion : ([MPCategory])->Void)
+    func updateRank(category : MPCategory)
 }
 
 protocol CategoryListInteractorOutput: class {

@@ -29,10 +29,17 @@ class MPLocationManager : NSObject, CLLocationManagerDelegate{
         self.requestLocationUpdates()
     }
     
+    func locationServicesEnabled() -> Bool{
+        
+        return CLLocationManager.locationServicesEnabled()
+    }
+    
     private func requestLocationUpdates() {
 
         self.locationManager.requestWhenInUseAuthorization()
+        
         if CLLocationManager.locationServicesEnabled() {
+            
             locationManager.delegate = self
             locationManager.desiredAccuracy = kCLLocationAccuracyKilometer
             locationManager.startUpdatingLocation()

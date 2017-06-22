@@ -44,3 +44,8 @@ class MPCategory : NSObject, NSCoding {
         self.rank += 1
     }
 }
+
+func ==(lhs: MPCategory, rhs: MPCategory) -> Bool {
+    
+    return lhs.title == rhs.title
+}

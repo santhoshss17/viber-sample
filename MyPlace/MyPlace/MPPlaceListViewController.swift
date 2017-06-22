@@ -32,6 +32,17 @@ extension MPPlaceListViewController : PlaceListView {
         
         self.collectionView.reloadData()
     }
+    
+    func displayAlert(message : String, primaryButtonTitle : String) {
+        
+        let alert = UIAlertController(title: self.title, message: message, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: primaryButtonTitle, style: .default, handler: { (action) in
+            
+        }))
+        self.present(alert, animated: true, completion: { 
+            
+        })
+    }
 }
 
 extension MPPlaceListViewController : UICollectionViewDelegate, UICollectionViewDataSource {
