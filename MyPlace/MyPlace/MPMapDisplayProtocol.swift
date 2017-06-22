@@ -12,6 +12,7 @@ protocol MapDisplayView : class {
     var presenter: MapDisplayPresenter! { get set }
     
     func updateUI(for place : MPPlace)
+    func displayAlert(message : String, primaryButtonTitle : String)
 }
 
 protocol MapDisplayPresenter: class {
@@ -20,6 +21,8 @@ protocol MapDisplayPresenter: class {
     var router: MapDisplayWireframe! { get set }
     
     func viewReadyToConfigure()
+    func userNeedPreviousMap()
+    func userNeedNextMap()
 }
 
 protocol MapDisplayUseCase: class {

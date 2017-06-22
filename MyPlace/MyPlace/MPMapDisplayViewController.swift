@@ -45,6 +45,16 @@ class MPMapDisplayViewController : UIViewController {
         self.presenter.viewReadyToConfigure()
     }
     
+    @IBAction func leftNavMapTapped(_ sender: Any) {
+        
+        self.presenter.userNeedPreviousMap()
+    }
+    
+    @IBAction func rightNavMapTapped(_ sender: Any) {
+        
+        self.presenter.userNeedNextMap()
+    }
+    
 }
 
 extension MPMapDisplayViewController : MapDisplayView {
@@ -79,6 +89,17 @@ extension MPMapDisplayViewController : MapDisplayView {
             let distance = round(MPLocationManager.shared.distanceFromCurrentLocation(to: placeLocation)/1000)
             self.distance.text = "\(distance) KM"
         }
+    }
+    
+    func displayAlert(message : String, primaryButtonTitle : String) {
+        
+        let alert = UIAlertController(title: self.title, message: message, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: primaryButtonTitle, style: .default, handler: { (action) in
+            
+        }))
+        self.present(alert, animated: true, completion: {
+            
+        })
     }
 
 }

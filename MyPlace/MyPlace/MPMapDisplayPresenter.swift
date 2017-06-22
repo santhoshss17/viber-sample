@@ -34,6 +34,33 @@ class MPMapDisplayPresenter : MapDisplayPresenter {
             self.view.updateUI(for : place)
         }
     }
+    
+    func userNeedPreviousMap() {
+        
+        if let place = self.datasource.place(at: self.context-1) {
+
+            self.place = place
+            self.context = self.context - 1
+            self.view.updateUI(for : place)
+        } else {
+            
+            self.view.displayAlert(message: "No place to load", primaryButtonTitle: "Ok")
+        }
+    }
+    
+    func userNeedNextMap() {
+        
+        if let place = self.datasource.place(at: self.context+1) {
+            
+            self.place = place
+            self.context = self.context + 1
+            self.view.updateUI(for : place)
+        } else {
+            
+            self.view.displayAlert(message: "No place to load", primaryButtonTitle: "Ok")
+        }
+    }
+
 }
 
 extension MPMapDisplayPresenter : MapDisplayInteractorOutput {
