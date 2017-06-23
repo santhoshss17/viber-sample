@@ -38,7 +38,7 @@ class MPLocationManager : NSObject, CLLocationManagerDelegate{
         
         var distanceInMeters :Double = 0
         
-        if let lat = self.currentLocation?.latitude, let lng = self.currentLocation?.latitude {
+        if let lat = self.currentLocation?.latitude, let lng = self.currentLocation?.longitude {
             let currentCoordinate = CLLocation(latitude: lat, longitude: lng)
             let coordinate = CLLocation(latitude: location.latitude, longitude: location.longitude)
             
