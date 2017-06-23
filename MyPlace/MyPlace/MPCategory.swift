@@ -30,7 +30,7 @@ class MPCategory : NSObject, NSCoding {
             return nil
         }
         let image = aDecoder.decodeObject(forKey: "image") as? UIImage
-        let rank = aDecoder.decodeObject(forKey: "rank") as? Int ?? 0
+        let rank = aDecoder.decodeInteger(forKey: "rank")
         let type = aDecoder.decodeObject(forKey: "type") as? String
     
         self.init(title: title, image: image, rank: rank, type: type)

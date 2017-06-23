@@ -31,7 +31,12 @@ class MPLocationManager : NSObject, CLLocationManagerDelegate{
     
     func locationServicesEnabled() -> Bool{
         
-        return CLLocationManager.locationServicesEnabled()
+        if CLLocationManager.authorizationStatus() == .authorizedWhenInUse && CLLocationManager.locationServicesEnabled() {
+            
+            return true
+        }
+        
+        return false
     }
     
     func distanceFromCurrentLocation(to location:CLLocationCoordinate2D) -> Double {
@@ -52,7 +57,7 @@ class MPLocationManager : NSObject, CLLocationManagerDelegate{
 
         self.locationManager.requestWhenInUseAuthorization()
         
-        if CLLocationManager.locationServicesEnabled() {
+        if self.locationServicesEnabled() {
             
             locationManager.delegate = self
             locationManager.desiredAccuracy = kCLLocationAccuracyKilometer
